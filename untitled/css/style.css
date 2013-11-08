@@ -1,0 +1,307 @@
+/* Eric Meyer's CSS Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* End of Eric Meyer's CSS Reset */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+	display: block;
+}
+body {
+	font: 12px/18px Arial, sans-serif;
+	width: 100%;
+    height: 100%;
+    background-color: #ccc;
+}
+.wrapper {
+    position:relative;
+	width: 1000px;
+	margin: 0 auto;
+    box-shadow: 0 0 10px #000000;
+    height: 100%;
+}
+
+
+/* Header
+-----------------------------------------------------------------------------*/
+.header {
+	height: 150px;
+    background-color: #454851;
+    width:100%;
+    text-align: center;
+    position:relative;
+    color:#d9ddea;
+    border-bottom:1px solid #292b30;
+}
+
+.header .logo_area {
+    height:150px;
+    float:left;
+    width:25%;
+}
+
+.header .current_user {
+    position:absolute;
+    top:50%;
+    height:50px;
+    margin-top:-25px;
+    margin-left:25%;
+    width:50%;
+    font-size:20px;
+}
+
+.header .login_area {
+    position:absolute;
+    top:60%;
+    height:40px;
+    margin-left:25%;
+    width:50%;
+    border: 1px solid #25272b;
+    box-shadow: 0 2px 1px rgba(0,0,0,0.2),inset 1px 1px 0 rgba(255,255,255,0.1);
+    text-align:left;
+    padding-left: 1%;
+    font-size:80%;
+}
+
+.header .pesquisa {
+    height:40px;
+    float:right;
+    display: inline-block;
+    border: 1px solid #25272b;
+    box-shadow: 0 2px 1px rgba(0,0,0,0.2),inset 1px 1px 0 rgba(255,255,255,0.1);
+    text-align: center;
+    padding: 10px;
+    margin-right: 2%;
+    margin-top: 7%;
+    width: 13%;
+    font: 13px Tahoma, sans-serif;
+}
+
+
+/* Middle
+-----------------------------------------------------------------------------*/
+.middle {
+    min-height: 500px;
+	width: 100%;
+    height: 100%;
+    position:relative;
+    background-color: #d9ddea;
+    border-bottom:1px solid #292b30;
+}
+.middle:after {
+	display: table;
+	clear: both;
+	content: '';
+}
+.container {
+	width: 100%;
+	float: left;
+    height: 100%;
+}
+.content {
+	padding: 10px 0 0 270px;
+    height: 100%;
+}
+
+.post-container, .post-form {
+    margin: 20px 20px 20px 0;
+    border: 2px solid #333;
+    overflow: auto;
+}
+.post-form {
+    text-align: right;
+}
+.post-thumb {
+    float: left;
+}
+.post-thumb img {
+    display: block;
+}
+.post-content {
+    margin-left: 210px;
+}
+.post-title, .post-form-title {
+    color:#d9ddea;
+    font-weight: bold;
+    font-size: 200%;
+    padding: 9px;
+    background: #454851;
+    border-bottom:1px solid #292b30;
+}
+.comment-form {
+    margin-left: 15%;
+    margin-right: auto;
+}
+.comment-form td {
+    padding:15px !important;
+    text-align: left;
+    vertical-align: top;
+}
+.comment-form #button_row {
+    text-align: right;
+}
+.post-footer {
+    text-align: right;
+    color:#d9ddea;
+    padding: 1px;
+    background: #454851;
+    border-top:1px solid #292b30;
+}
+.post-footer .name  {
+    font-weight: bold;
+    color:red;
+}
+.user_page {
+    font-weight: bold;
+}
+#search_results_header {
+    font-size: 200%;
+}
+
+
+/* Left Sidebar
+-----------------------------------------------------------------------------*/
+.left-sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+	width: 25%;
+    overflow: hidden;
+    height:100%;
+    background-color: #454851;
+}
+
+/* Menu
+-----------------------------------------------------------------------------*/
+ul.vmenu {
+    background-color: #454851;
+    list-style: none;
+    font: 13px Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow:hidden
+}
+ul.vmenu li.home {background:url(../images/home-icon.png) 12px 12px no-repeat}
+ul.vmenu li.home:hover {background:url(../images/home-icon.png) 12px -21px no-repeat}
+
+ul.vmenu li.utilizador {background:url(../images/utilizador-icon.png) 12px 12px no-repeat}
+ul.vmenu li.utilizador:hover {background:url(../images/utilizador-icon.png) 12px -23px no-repeat}
+
+ul.vmenu li.empresas {background:url(../images/empresas-icon.png) 12px 11px no-repeat}
+ul.vmenu li.empresas:hover {background:url(../images/empresas-icon.png) 12px -22px no-repeat}
+
+ul.vmenu li.contactos {background:url(../images/contactos-icon.png) 12px 11px no-repeat}
+ul.vmenu li.contactos:hover {background:url(../images/contactos-icon.png) 12px -22px no-repeat}
+
+ul.vmenu li a {
+    background: url(../images/bg-li-a.png) repeat-x;
+    box-shadow:inset 0 1px 0 rgba(255,255,255,0.1);
+    border-bottom:1px solid #292b30;
+    color:#d9ddea;
+    display:block;
+    text-decoration:none;
+    padding:10px 10px 10px 40px;
+    height:18px;
+}
+ul.vmenu li:first-child a {box-shadow:none;}
+ul.vmenu li a:hover {background: url(../images/bg-li-a-hover.png) repeat-x;}
+ul.vmenu li.parent a span {
+    display:block;
+    background:url(../images/arrow-down.png) right center no-repeat;
+}
+ul.vmenu li.parent a.selected span {background:url(../images/arrow-up.png) right center no-repeat}
+
+/* Dropdown items
+-----------------------------------------------------------------------------*/
+ul.vmenu li ul.dropdown {
+    height:0;
+    overflow:hidden
+}
+ul.vmenu li .menu_selected {
+    font-weight:bold;
+    color:#fff;
+}
+ul.vmenu li .drop_selected {
+    color:#fff;
+    font-weight:bold;
+    background: url(../images/menu-dropdown-figure.png) 18px -8px no-repeat !important;
+}
+ul.vmenu li ul {
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+ul.vmenu li ul li {
+    background:url(../images/dropdown-menu-li.jpg) repeat-x;
+}
+ul.vmenu li ul li a {
+    background:none;
+    padding:0;
+    height:38px
+}
+ul.vmenu li ul li a span {
+    background: url(../images/menu-dropdown-figure.png) 18px 16px no-repeat !important;
+    display:block;
+    padding:10px 10px 10px 40px;
+}
+ul.vmenu li ul li a:hover span {background: url(../images/menu-dropdown-figure.png) 18px -8px no-repeat !important;}
+ul.vmenu li ul li a:hover {background-color: #454851; }
+
+
+/* Footer
+-----------------------------------------------------------------------------*/
+.footer {
+	height: 100px;
+	background-color: #454851;
+    color:#d9ddea;
+    text-align: center;
+    font-size:200%;
+    line-height: 100px;
+}
+
+.footer .span {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+}
