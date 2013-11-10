@@ -1,0 +1,68 @@
+@media screen and (max-width: 980px) {
+    .wrapper {
+        width: 85%;
+    }
+    .content {
+        width: 60%;
+        padding: 3% 4%;
+    }
+    .left-sidebar {
+        width: 30%;
+    }
+    .pesquisa tr {
+        width:10px;
+    }
+    .comment-form {
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width: 720px) {
+    .current_user {
+        display:none;
+    }
+    .login_area {
+        display:none;
+    }
+    .user_info {
+        display:none;
+    }
+    .header .pesquisa {
+        display:none !important;
+    }
+    .menu_mobile {
+        display:block;
+        position:relative;
+        margin-left:50%;
+        width:50%;
+    }
+    .left-sidebar {
+        display:none;
+    }
+    .content {
+        width:100%;
+        margin:0 auto;
+    }
+    .header {
+        height: 100%;
+    }
+    .post-thumb {
+        display:none !important;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .logo_area {
+        display:none !important;
+    }
+    .no_logo {
+        display:block;
+    }
+    .menu_mobile {
+        position:relative;
+        margin:0 auto;
+        width:100%;
+    }
+    .header {
+        height: 100%;
+    }
+}

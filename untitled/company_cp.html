@@ -24,7 +24,7 @@
             <nav id="navigation_mobile">
                 <div class="no_logo" style="font-size:200%; padding:20px;">Let’s get pro!</div>
                 <ul class="vmenu">
-                    <li class="home"><a href="index.html"><span class="menu_selected">Home</span></a></li>
+                    <li class="home"><a href="index.html"><span class="menu_hidden">Home</span></a></li>
                     <li class="utilizador parent"><a href="#"><span class="menu_hidden">Utilizador</span></a>
                         <ul class="dropdown">
                             <li><a href="login.html"><span>Entrar/Registar-se</span></a></li>
@@ -32,13 +32,13 @@
                             <li><a href="user_list.html"><span>Lista de utilizadores</span></a></li>
                         </ul>
                     </li>
-                    <li class="empresas parent"><a href="#"><span class="menu_hidden">Empresas</span></a>
+                    <li class="empresas parent"><a href="#"><span class="menu_selected">Empresas</span></a>
                         <ul class="dropdown">
-                            <li><a href="company_cp.html"><span>Painel da empresa</span></a></li>
+                            <li><a href="company_cp.html"><span class="drop_selected">Painel da empresa</span></a></li>
                             <li><a href="company_list.html"><span>Lista de empresas</span></a></li>
                         </ul>
                     </li>
-                    <li class="contactos"><a href="contacts.html" class="menu_selected">Contactos</a></li>
+                    <li class="contactos"><a href="contacts.html">Contactos</a></li>
                     <li class="pesquisa_menu"><a href="search.html">Pesquisa</a></li>
                 </ul>
             </nav>
@@ -75,74 +75,59 @@
 
         <div class="container">
             <main class="content">
-                <div class="pesquisa">
-                    Procurarar utilizadores
-                    <form method="get" action="search.html">
-                        <table>
-                            <tr>
-                                <td>
-                                    <input type="text" name="zoom_query" id="search_query">
-                                </td>
-                                <td>
-                                    <input type="submit" value="" id="search_button">
-                                </td>
-                            </tr>
-                        </table>
-                    </form>
-                </div>
                 <div class="post-container">
-                    <h3 class="post-title">Conctactos</h3>
+                    <h3 class="post-title">Empresa 1</h3>
                     <div class="post-content">
                         <table>
-                            <tr style="border-bottom: 1px solid">
-                                <td>Nome</td><td>Especialização</td><td>País</td>
+                            <tr>
+                                <th>Nome:</th><td>Empresa 1</td>
                             </tr>
                             <tr>
-                                <td><a class="user_cp_link" href="#">Dummy 1</a></td><td><a class="user_cp_link" href="#">IT</a></td><td><a class="user_cp_link" href="#">Portugal</a></td></td>
+                                <th>Presidente:</th><td><a class="user_cp_link" href="#">Dummy 55</a></td>
                             </tr>
                             <tr>
-                                <td><a class="user_cp_link" href="#">Dummy 2</a></td><td><a class="user_cp_link" href="#">IT</a></td><td><a class="user_cp_link" href="#">Portugal</a></td></td>
+                                <th>Pais:</th><td><a class="user_cp_link" href="#">Portugal</a></td>
                             </tr>
                             <tr>
-                                <td><a class="user_cp_link" href="#">Dummy 3</a></td><td><a class="user_cp_link" href="#">IT</a></td><td><a class="user_cp_link" href="#">Portugal</a></td></td>
+                                <th>Descrição:</th><td>Sobre Empresa 1</td>
                             </tr>
                             <tr>
-                                <td><a class="user_cp_link" href="#">Dummy 4</a></td><td><a class="user_cp_link" href="#">IT</a></td><td><a class="user_cp_link" href="#">Portugal</a></td></td>
+                                <th>Área:</th><td><a class="user_cp_link" href="#">IT</a></td>
                             </tr>
                         </table>
                     </div>
                 </div>
                 <div class="post-container">
-                    <h3 class="post-title">Pedidos de contacto pendentes</h3>
+                    <h3 class="post-title">Colaboradores presentes</h3>
                     <div class="post-content">
                         <table>
                             <tr style="border-bottom: 1px solid">
-                                <td>Nome</td><td>Assunto</td>
+                                <td>Colaborador</td><td>Carga</td>
                             </tr>
                             <tr>
-                                <td><a class="user_cp_link" href="#">Dummy 2</a></td><td><a class="user_cp_link" href="#">What’s up?</a></td>
+                                <td><a class="user_cp_link" href="#">Dummy 1</a></td><td><a class="user_cp_link" href="#">Programador</a></td>
+                            </tr>
+                            <tr>
+                                <td><a class="user_cp_link" href="#">Dummy 2</a></td><td><a class="user_cp_link" href="#">Web Master</a></td>
                             </tr>
                         </table>
                     </div>
                 </div>
-                <div class="post-form">
-                    <h3 class="post-form-title">Enviar pedido de contacto</h3>
-                    <form class="comment-form">
+                <div class="post-container">
+                    <h3 class="post-title">Colaboradores passados</h3>
+                    <div class="post-content">
                         <table>
-                            <tr>
-                                <td>Destinatário:</td><td><input type='text' name='name' id='user' style="width: 75%;" /></td>
+                            <tr style="border-bottom: 1px solid">
+                                <td>Colaborador</td><td>Carga</td>
                             </tr>
                             <tr>
-                                <td>Assunto:</td><td><input type='text' name='name' id='title' style="width: 75%;" /></td>
+                                <td><a class="user_cp_link" href="#">Dummy 3</a></td><td><a class="user_cp_link" href="#">Programador</a></td>
                             </tr>
                             <tr>
-                                <td>Mensagem:</td><td><textarea name='post' id='meesage' cols="50" rows="10" style="resize: none;" /></textarea></td>
-                            </tr>
-                            <tr>
-                                <td colspan="2" id="button_contact" style="text-align: right"><input type="submit"></td>
+                                <td><a class="user_cp_link" href="#">Dummy 4</a></td><td><a class="user_cp_link" href="#">Web Master</a></td>
                             </tr>
                         </table>
-                    </form>
+                    </div>
                 </div>
             </main><!-- .content -->
         </div><!-- .container-->
@@ -174,13 +159,13 @@
                             <li><a href="user_list.html"><span>Lista de utilizadores</span></a></li>
                         </ul>
                     </li>
-                    <li class="empresas parent"><a href="#"><span class="menu_hidden">Empresas</span></a>
+                    <li class="empresas parent"><a href="#"><span class="menu_selected">Empresas</span></a>
                         <ul class="dropdown">
-                            <li><a href="company_cp.html"><span>Painel da empresa</span></a></li>
+                            <li><a href="company_cp.html"><span class="drop_selected">Painel da empresa</span></a></li>
                             <li><a href="company_list.html"><span>Lista de empresas</span></a></li>
                         </ul>
                     </li>
-                    <li class="contactos"><a href="contacts.html" class="menu_selected">Contactos</a></li>
+                    <li class="contactos"><a href="contacts.html">Contactos</a></li>
                     <li class="pesquisa_menu"><a href="search.html">Pesquisa</a></li>
                 </ul>
             </nav>

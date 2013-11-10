@@ -24,6 +24,7 @@ $(function() {
 
 $(function() {
     $(".comment-form").hide();
+    $(".contacts").siblings().hide();
 });
 
 $(function() {
@@ -40,36 +41,62 @@ $(function() {
 });
 
 $(function() {
-    $(".post-form td :submit").click(function(){
+    $(".contacts").click(function(){
+        $(this).siblings().toggle();
+    });
+});
+
+$(function() {
+    $(".post-form #button_row").click(function(){
         event.preventDefault();
 
         var name = $("#name").val();
         var post = $("#post").val();
 
-        var content =
-            "<div class='post-container'>" +
-                "<h3 class='post-title'>"+name+"</h3>" +
-                "<div class='post-thumb'><img src='http://www.prostomac.com/wp-content/uploads/2013/04/dummy-escape-icon.jpg'/></div>" +
-                "<div class='post-content'><p>"+post+"</p></div>" +
-                "<div class='post-footer'><span class='name'>Name 1</span> on</div>" +
-            "</div>";
-        $(".content").prepend(content);
+        if(name=="" || post=="")
+            alert("Nome ou mesnagem vazio");
+        else {
+            var content =
+                "<div class='post-container'>" +
+                    "<h3 class='post-title'>"+name+"</h3>" +
+                    "<div class='post-thumb'><img src='http://www.prostomac.com/wp-content/uploads/2013/04/dummy-escape-icon.jpg'/></div>" +
+                    "<div class='post-content'><p>"+post+"</p></div>" +
+                    "<div class='post-footer'><img src='http://d1vu33opq27khs.cloudfront.net/application-com.LevelZed.DummyEscapeLite-icon'/><span class='name'><a href='#'>Name 1</a></span> on 20.02.2013</div>" +
+                "</div>";
+            $(".content").prepend(content);
 
-        $(".post-title:first").click(function(){
-            $(this).siblings(".post-thumb").slideToggle("slow");
-            $(this).siblings(".post-content").slideToggle("slow");
-        });
-
+            $(".post-title:first").click(function(){
+                $(this).siblings(".post-thumb").slideToggle("slow");
+                $(this).siblings(".post-content").slideToggle("slow");
+            });
+        }
     });
 });
 
 $(function() {
     $(".pesquisa td :submit").click(function() {
-        event.preventDefault();
-        window.location = "search.html";
+
         var search_val=$("#search_query").val();
-        $("#search_results").empty();
-        $("#search_results_header").empty();
-        $("#search_results_header").append("Search results for: "+search_val);
+
+        $("#search_results_header").show();
+
+    });
+});
+
+$(function() {
+    $("#search_button_page").click(function() {
+        event.preventDefault();
+
+        $("#search_results_header").show();
+
+    });
+});
+
+
+
+$(function() {
+    $("ul.tabs").on("click", "li:not(.current)", function() {
+        $(this).addClass("current").siblings().removeClass("current")
+            .parents("#search_results").find("div.box").eq($(this).index()).fadeIn(150).siblings("div.box").hide();
     });
 });

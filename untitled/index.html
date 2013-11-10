@@ -10,6 +10,7 @@
 	<meta name="keywords" content="empresas, contactos" />
 	<meta name="description" content="Let’s get pro!" />
 	<link href="css/style.css" rel="stylesheet">
+    <link href="css/media-queries.css" rel="stylesheet">
 </head>
 
 <body>
@@ -19,23 +20,50 @@
         <div class="logo_area">
             <a href="index.html"><img src="images/logo.png" ></a>
         </div>
+        <div class="menu_mobile">
+            <nav id="navigation_mobile">
+                <div class="no_logo" style="font-size:200%; padding:20px;">Let’s get pro!</div>
+                <ul class="vmenu">
+                    <li class="home"><a href="index.html"><span class="menu_selected">Home</span></a></li>
+                    <li class="utilizador parent"><a href="#"><span class="menu_hidden">Utilizador</span></a>
+                        <ul class="dropdown">
+                            <li><a href="login.html"><span>Entrar/Registar-se</span></a></li>
+                            <li><a href="user_cp.html"><span>Painel do utilizador</span></a></li>
+                            <li><a href="user_list.html"><span>Lista de utilizadores</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="empresas parent"><a href="#"><span class="menu_hidden">Empresas</span></a>
+                        <ul class="dropdown">
+                            <li><a href="company_cp.html"><span>Painel da empresa</span></a></li>
+                            <li><a href="company_list.html"><span>Lista de empresas</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="contactos"><a href="contacts.html">Contactos</a></li>
+                    <li class="pesquisa_menu"><a href="search.html">Pesquisa</a></li>
+                </ul>
+            </nav>
+        </div>
         <div class="current_user">
-            Current user’s name and other information...
+            Welcome, dummy!
         </div>
         <div class="login_area">
-            Username&nbsp;<input type="text" name="username" id="username" style="width:70px; border:0px solid; height:15px; margin-top: 2.5%; font-size:80%;">&nbsp;
-            Password&nbsp;<input type="text" name="password" id="password" style="width:70px; border:0px solid; height:15px; margin-top: 2.5%; font-size:80%;">
+            <div class="login_content">
+                Username&nbsp;<input type="text" name="username" id="username">
+                Password&nbsp;<input type="password" name="password" id="password">
+                &nbsp;<input type="submit" value="Entrar" id="login_button">
+                &nbsp;<a href="#">Registrar-se</a>
+            </div>
         </div>
         <div class="pesquisa">
             Pesquisar
-            <form method="get" style="margin-top: 2px;">
+            <form method="get" action="search.html">
                 <table>
-                    <tr style="border:2px solid #4B7B9F;margin-top: 5px;">
+                    <tr>
                         <td>
-                            <input type="text" name="zoom_query" id="search_query" style="width:100px; border:0px solid; height:20px; padding:0px 3px;">
+                            <input type="text" name="zoom_query" id="search_query">
                         </td>
                         <td>
-                            <input type="submit" value="" id="search_button" style="border-style: none; background: url('images/searchbutton3.gif') no-repeat; width: 24px; height: 20px;">
+                            <input type="submit" value="" id="search_button">
                         </td>
                     </tr>
                 </table>
@@ -54,7 +82,9 @@
                         <p>post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc  </p>
                     </div>
                     <div class="post-footer">
-                        <span class="name">Name 1</span> on 19.01.2013
+                        <img src="http://d1vu33opq27khs.cloudfront.net/application-com.LevelZed.DummyEscapeLite-icon"/>
+                        <span class="name"><a href="#">Dummy</a></span> on 19.01.2013
+                        <span class="share"><a href="#">Partilhar</a></span>
                     </div>
                 </div>
                 <div class="post-container">
@@ -64,7 +94,9 @@
                         <p>post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc  </p>
                     </div>
                     <div class="post-footer">
-                        <span class="name">Name 2</span> on 18.01.2013
+                        <img src="http://d1vu33opq27khs.cloudfront.net/application-com.LevelZed.DummyEscapeLite-icon"/>
+                        <span class="name"><a href="#">Dummy</a></span> on 18.01.2013
+                        <span class="share"><a href="#">Partilhar</a></span>
                     </div>
                 </div>
                 <div class="post-container">
@@ -73,8 +105,9 @@
                     <div class="post-content">
                         <p>post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc  </p>
                     </div>
-                    <div class="post-footer">
-                        <span class="name">Name 3</span> on 17.01.2013
+                    <div class="post-footer"><img src="http://d1vu33opq27khs.cloudfront.net/application-com.LevelZed.DummyEscapeLite-icon"/>
+                        <span class="name"><a href="#">Dummy</a></span> on 17.01.2013
+                        <span class="share"><a href="#">Partilhar</a></span>
                     </div>
                 </div>
                 <div class="post-form">
@@ -97,31 +130,59 @@
 		</div><!-- .container-->
 
 		<aside class="left-sidebar">
-            <ul class="vmenu">
-                <li class="home"><a href="index.html"><span class="menu_selected">Home</span></a></li>
-                <li class="utilizador parent"><a href="#"><span class="menu_hidden">Utilizador</span></a>
-                    <ul class="dropdown">
-                        <li><a href="user_cp.html"><span>Painel do utilizador</span></a></li>
-                        <li><a href="#"><span>2</span></a></li>
-                        <li><a href="#"><span>3</span></a></li>
-                    </ul>
-                </li>
-                <li class="empresas parent"><a href="#"><span class="menu_hidden">Empresas</span></a>
-                    <ul class="dropdown">
-                        <li><a href="#"><span>1</span></a></li>
-                        <li><a href="#"><span>2</span></a></li>
-                        <li><a href="#"><span>3</span></a></li>
-                    </ul>
-                </li>
-                <li class="contactos"><a href="contacts.html">Contactos</a></li>
-            </ul>
+            <div class="user_info">
+                <table>
+                    <tr>
+                        <td rowspan="3"><a href="user_cp.html"><img src="http://forum.predatornutrition.com/wp-content/sp-resources/forum-avatars/1355478852crash_test_dummy-resized.jpg"/></a></td>
+                        <td>Dummy</td>
+                    </tr>
+                    <tr>
+                        <td>22 anos</td>
+                    </tr>
+                    <tr>
+                        <td>Portugal</td>
+                    </tr>
+                    <tr>
+                        <td><a href="user_cp.html">Editar perfil</a></td>
+                    </tr>
+                </table>
+            </div>
+            <nav id="navigation">
+                <ul class="vmenu">
+                    <li class="home"><a href="index.html"><span class="menu_selected">Home</span></a></li>
+                    <li class="utilizador parent"><a href="#"><span class="menu_hidden">Utilizador</span></a>
+                        <ul class="dropdown">
+                            <li><a href="user_cp.html"><span>Painel do utilizador</span></a></li>
+                            <li><a href="user_list.html"><span>Lista de utilizadores</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="empresas parent"><a href="#"><span class="menu_hidden">Empresas</span></a>
+                        <ul class="dropdown">
+                            <li><a href="company_cp.html"><span>Painel da empresa</span></a></li>
+                            <li><a href="company_list.html"><span>Lista de empresas</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="contactos"><a href="contacts.html">Contactos</a></li>
+                    <li class="pesquisa_menu"><a href="search.html">Pesquisa</a></li>
+                </ul>
+            </nav>
 		</aside><!-- .left-sidebar -->
 
 	</div><!-- .middle-->
 
-	<footer class="footer">
-        <span>Footer</span>
-	</footer><!-- .footer -->
+    <footer class="footer">
+        <span>DAWeb 2013</span>
+        <div class="authors">
+            <div class="contacts"><a href="about.html">Contactos</a></div>
+        </div>
+        <div class="validators"><p>
+            <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                <img style="border:0;width:88px;height:31px"
+                     src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+                     alt="Valid CSS!" />
+            </a>
+        </p></div>
+    </footer><!-- .footer -->
 
 </div><!-- .wrapper -->
 
