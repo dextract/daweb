@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="js/functions.js"></script>
+    <title>Let’s Get Pro - Relatório</title>
+    <meta name="keywords" content="empresas, contactos" />
+    <meta name="description" content="Let’s get pro!" />
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/media-queries.css" rel="stylesheet">
+</head>
+<body>
+
+
+<div class="wrapper">
+    <header class="header">
+        <div class="logo_area">
+            <a href="index.html"><img src="images/logo.png" alt="logo" ></a>
+        </div>
+        <div class="menu_mobile">
+            <nav id="navigation_mobile">
+                <div class="no_logo">Let’s get pro!</div>
+                <ul class="vmenu">
+                    <li class="home"><a href="index.html"><span class="menu_selected">Home</span></a></li>
+                    <li class="utilizador parent"><a href="#"><span class="menu_hidden">Utilizador</span></a>
+                        <ul class="dropdown">
+                            <li><a href="login.html"><span>Entrar/Registar-se</span></a></li>
+                            <li><a href="user_cp.html"><span>Painel do utilizador</span></a></li>
+                            <li><a href="user_list.html"><span>Lista de utilizadores</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="empresas parent"><a href="#"><span class="menu_hidden">Empresas</span></a>
+                        <ul class="dropdown">
+                            <li><a href="company_cp.html"><span>Painel da empresa</span></a></li>
+                            <li><a href="company_list.html"><span>Lista de empresas</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="contactos"><a href="contacts.html">Contactos</a></li>
+                    <li class="pesquisa_menu"><a href="search.html">Pesquisa</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="current_user">
+            Welcome, dummy!
+        </div>
+        <div class="login_area">
+            <div class="login_content">
+                Username&nbsp;<input type="text" name="username" id="username">
+                Password&nbsp;<input type="password" name="password" id="password">
+                &nbsp;<input type="submit" value="Entrar" id="login_button">
+                &nbsp;<a href="#">Registrar-se</a>
+            </div>
+        </div>
+        <div class="pesquisa">
+            Pesquisar
+            <form method="get" action="search.html">
+                <table>
+                    <tr>
+                        <td>
+                            <input type="text" name="zoom_query" id="search_query">
+                        </td>
+                        <td>
+                            <input type="submit" value="" id="search_button">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </header><!-- .header-->
+
+    <div class="middle">
+
+        <div class="container">
+            <main class="content">
+                <div class="post-container">
+                    <h3 class="post-title">0 Índice</h3>
+                    <div class="post-content">
+                        <p><a href="#chap1">1 Introdução</a></p>
+                        <p><a href="#chap2">2 Apresentação</a></p>
+                        <p><a href="#chap2_1">2.1 Estrutura Principal</a></p>
+                        <p><a href="#chap2_2">2.2 Página Principal</a></p>
+                        <p><a href="#chap2_3">2.3 Página de Utilizador (Painel de Utilizador)</a></p>
+                        <p><a href="#chap2_4">2.4 Página de Utilizador (Lista de Utilizadores)</a></p>
+                        <p><a href="#chap2_5">2.5 Página de Empresa (Painel da Empresa)</a></p>
+                        <p><a href="#chap2_6">2.6 Página de Empresa (Lista de Empresas)</a></p>
+                        <p><a href="#chap2_7">2.7 Página de Contactos</a></p>
+                        <p><a href="#chap2_8">2.8 Página de Pesquisa</a></p>
+                        <p><a href="#chap2_9">2.9 Página Livre</a></p>
+                        <p><a href="#chap2_10">2.10 Página de Login/Registo</a></p>
+                        <p><a href="#chap3">3 Conclusão</a></p>
+                        <p><a href="#chap4">4 Bibliografia</a></p>
+                    </div>
+                </div>
+                <div class="post-container">
+                    <a id="chap1"></a>
+                    <h3 class="post-title">1 Introdução</h3>
+                    <div class="post-content">
+                        <p>No âmbito deste trabalho prático pretendia-se desenvolver a parte “client-side” duma aplicação Web “Let’s Get Pro”―uma rede social de cariz profissional, onde se relaciona a informação sobre utilizadores individuais e os seus currículos, sobre empresas onde essas pessoas trabalham, e um conjunto de contactos profissionais. Na elaboração deste trabalho foram exploradas e aplicadas tecnologias como HTML, CSS, e jQuery, de modo a conseguir satisfazer os requisitos da aplicação final, permitindo uma separação da estrutura e comportamento da aplicação. A aplicação foi estruturada de acordo com os requisitos de “responsive design”, o que permite uma maior portabilidade da mesma, o que é especialmente importante nos tempos modernos abundantes de vários equipamentos portáteis e móveis.</p>
+                    </div>
+                </div>
+                <div class="post-container">
+                    <a id="chap2"></a>
+                    <h3 class="post-title">2 Apresentação</h3>
+                    <div class="post-content">
+                        <p>Todas as páginas têm secções fixas: de apresentação da aplicação no cabeçalho, onde aparece a informação do utilizador corrente, um logótipo, e um campo de pesquisa; de apresentação dos autores, logótipos e links para os validadores no rodapé; uma zona central onde aparece de forma destacada o conteúdo principal da página; e uma zona de acesso às várias páginas da aplicação e resumo da actividade recente do lado esquerdo.
+                            No desenho das páginas optou-se por utilizar o layout mais “tradicional”: cabeçalho, menu vertical esquerdo, conteúdo no meio, e rodapé. Os autores sentiram que, desta maneira, se conseguia destacar melhor o menu principal para permitir o seu uso mais fácil, visto que a aplicação exige uma utilização abundante da navegação. Optou-se também por não utilizar cores nem muito claras nem muito escuras no desenho do conteúdo de modo a garantir um uso prolongado mais confortável.
+                            Todas as páginas respeitam “responsive design”, modificando assim o seu aspecto de acordo com o espaço do visor disponível.
+                            A seguir segue uma descrição mais detalhada de cada página constituinte.
+                        </p>
+                        <div class="post-container">
+                            <a id="chap2_1"></a>
+                            <h4 class="post-title">2.1 Estrutura Base</h4>
+                            <div class="post-content">
+                                <p>Cada página da aplicação tem a mesma estrutura base:</p>
+                                <br>
+                                    <p>&lt;div class="wrapper"></p>
+                                    <p>&emsp;&lt;header class="header">&lt;/header></p>
+                                    <p>&emsp;&lt;div class="middle"></p>
+                                    <p>&emsp;&emsp;&lt;div class="container"></p>
+                                    <p>&emsp;&emsp;&emsp;&lt;main class="content">&lt;/main></p>
+                                    <p>&emsp;&emsp;&lt;/div></p>
+                                    <p>&emsp;&emsp;&lt;aside class="left-sidebar">&lt;/aside></p>
+                                    <p>&emsp;&lt;/div></p>
+                                    <p>&emsp;&lt;footer class="footer">&lt;/footer></p>
+                                    <p>&lt;/div></p>
+                                <br>
+                                <p>A classe wrapper serve para marcar a “verdadeira” página, tendo a largura fixa de 980px, permitindo assim uma aparência mais limpa sem ocupar o espaço ecrã  todo. A classe header denomina o cabeçalho, que tem a altura fixa de 150px. A seguir vem a parte central da página, a classe “middle”, a qual, pela sua vez, não tem tamanho fixo máximo (tendo o mínimo de 600px), e contém mais duas sub-classes: “container/container”, que representa a parte do conteúdo principal da página, e “left-sidebar” que contem o espaço para a representação do utilizador, o menu principal, e a actividade recente. Por fim, a classe “footer” denomina o rodapé da pagina e tem 70px de altura.</p>
+                            </div>
+                        </div>
+                        <div class="post-container">
+                            <a id="chap2_2"></a>
+                            <h4 class="post-title">2.2 Página Principal</h4>
+                            <div class="post-content">
+                                <p>A página principal da aplicação é utilizada para mostrar um conjunto de notícias emitidas pelos vários utilizadores do sistema. Cada notícia inclui a fotografia do autor, o texto, e uma imagem relacionada. Cada notícia é apresentada numa caixa constituinte por uma secção para o título; uma secção destinada ao conteúdo principal (texto e imagem) da notícia; e um rodapé, que serve para apresentar o nome e a fotografia do autor da notícia, junto com a data da publicação da mesma e uma ligação “Partilhar”, que permite a partilha da mesma. Ao carregar no título duma notícia, esta pode ser escondida e expandida conforme o desejado, escondendo o conteúdo principal da notícia, deixando visível apenas o seu título e o rodapé. É de notar que na versão “mobile” da aplicação, a imagem da notícia não é apresentada de modo a poupar o espaço disponível, e o tamanho da letra também é diminuído com o mesmo objectivo.</p>
+                            </div>
+                        </div>
+                        <div class="post-container">
+                            <a id="chap2_3"></a>
+                            <h4 class="post-title">2.3 Página de Utilizador (Painel de Utilizador)</h4>
+                            <div class="post-content">
+                                <p>A página do utilizador inclui a informação pessoal do utilizador, sendo que o elemento principal é o seu currículo vitae. O curriculo vitae é composto por uma série de entradas temporizadas de cargos em empresas. Cada utilizador tem um texto de introdução e informação actual sobre o seu trabalho. Também são apresentados os pedidos pendentes de contacto, caso o utilizador tenha alguns. Cada secção desta página é separada por utilização das mesmas caixas que são utilizadas na página principal.</p>
+                            </div>
+                        </div>
+                        <div class="post-container">
+                            <a id="chap2_4"></a>
+                            <h4 class="post-title">2.4 Página de Utilizador (Lista de Utilizadores)</h4>
+                            <div class="post-content">
+                                <p>Esta página serve para apresentar alfabeticamente todos os utilizadores do sistema e informação principal sobre cada um, como o nome, a área de especialização, e o país. </p>
+                            </div>
+                        </div>
+                        <div class="post-container">
+                            <a id="chap2_5"></a>
+                            <h4 class="post-title">2.5 Página de Empresa (Painel da Empresa)</h4>
+                            <div class="post-content">
+                                <p>A página da empresa, para além de informação geral sobre a mesma, apresenta de maneira diferenciada os utilizadores registados que trabalham numa mesma empresa, dividindo em colaboradores actuais e passados, separando cada secção por caixas dinâmicas.</p>
+                            </div>
+                        </div>
+                        <div class="post-container">
+                            <a id="chap2_6"></a>
+                            <h4 class="post-title">2.6 Página de Empresa (Lista de Empresas)</h4>
+                            <div class="post-content">
+                                <p>Esta página serve o mesmo propósito que a página “Lista de Utilizadores”, apenas focando em empresas envolvidas.</p>
+                            </div>
+                        </div>
+                        <div class="post-container">
+                            <a id="chap2_7"></a>
+                            <h4 class="post-title">2.7 Página de Contactos</h4>
+                            <div class="post-content">
+                                <p>A página de contactos apresenta de forma ordenada os contactos do utilizador corrente. É possível pesquisar um utilizador e enviar pedidos de contactos a outros utilizadores. Também são visíveis e mantidos nesta página os pedidos de contacto pendentes do utilizador.</p>
+                            </div>
+                        </div>
+                        <div class="post-container">
+                            <a id="chap2_8"></a>
+                            <h4 class="post-title">2.8 Página de Pesquisa</h4>
+                            <div class="post-content">
+                                <p>Também é possível pesquisar, a partir do campo de pesquisa, todos os utilizadores e empresas com um determinado nome. Neste caso, será usada a paginação dos resultados da mesma forma que na página dos contactos. Depois de introduzir a chave da pesquisa, aparecerá um campo com os resultados da mesma, separado por “tabs” por utilizadores e empresas.</p>
+                            </div>
+                        </div>
+                        <div class="post-container">
+                            <a id="chap2_9"></a>
+                            <h4 class="post-title">2.9 Página Livre</h4>
+                            <div class="post-content">
+                                <p>Esta página, acessível através do rodapé pela ligação “Contactos”,  serve para apresentação do grupo e apresenta a identificação, os endereços e-mail, e as fotos dos autores deste trabalho.</p>
+                            </div>
+                        </div>
+                        <div class="post-container">
+                            <a id="chap2_10"></a>
+                            <h4 class="post-title">2.10 Página de Login/Registo</h4>
+                            <div class="post-content">
+                                <p>Como na versão “mobile” da aplicação o campo de login e registo desaparecem de modo a poupar espaço, para este caso existe mais uma entrada dinâmica no menu “Utilizador” que permite login e registo redireccionando para a página apropriada.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="post-container">
+                    <a id="chap3"></a>
+                    <h3 class="post-title">3 Conclusão</h3>
+                    <div class="post-content">
+                        <p>Com o desenvolvimento deste trabalho e a consulta dos recursos utilizados, os autores conseguiram desenvolver as aptidões necessárias para o desenvolvimento de aplicações para a Web com foco predominante na componente do cliente. Em especial, sentem que adquiriram um confortável domínio sobre HTML, CSSs e Javascript/jQuery.</p>
+                    </div>
+                </div>
+                <div class="post-container">
+                    <a id="chap4"></a>
+                    <h3 class="post-title">4 Bibliografia</h3>
+                    <div class="post-content">
+                        <p>Livros:</p>
+                        <p>Robbins, J. N. (2012). Learning Web Design (4th ed.). Sebastopol, CA: O’Reilly</p>
+                        <p>Bibeault, B. & Katz, Y. (2010). jQuery in Action (2nd ed.). Stamford, CT: Manning</p>
+                        <br>
+                        <p>Recursos Web:</p>
+                        <p><a href="http://www.w3schools.com/jquery/default.asp">http://www.w3schools.com/jquery/default.asp</a></p>
+                        <p><a href="http://www.w3schools.com/html/default.asp">http://www.w3schools.com/html/default.asp</a></p>
+                        <p><a href="http://www.w3schools.com/css/default.asp">http://www.w3schools.com/css/default.asp</a></p>
+                        <p><a href="http://api.jquery.com">http://api.jquery.com</a></p>
+                    </div>
+                </div>
+            </main><!-- .content -->
+        </div><!-- .container-->
+
+        <aside class="left-sidebar">
+            <div class="user_info">
+                <table>
+                    <tr>
+                        <td rowspan="3"><a href="user_cp.html"><img src="http://forum.predatornutrition.com/wp-content/sp-resources/forum-avatars/1355478852crash_test_dummy-resized.jpg" alt="avatar"/></a></td>
+                        <td>Dummy</td>
+                    </tr>
+                    <tr>
+                        <td>22 anos</td>
+                    </tr>
+                    <tr>
+                        <td>Portugal</td>
+                    </tr>
+                    <tr>
+                        <td><a href="user_cp.html">Editar perfil</a></td><td>&nbsp;</td>
+                    </tr>
+                </table>
+            </div>
+            <nav id="navigation">
+                <ul class="vmenu">
+                    <li class="home"><a href="index.html"><span class="menu_hidden">Home</span></a></li>
+                    <li class="utilizador parent"><a href="#"><span class="menu_hidden">Utilizador</span></a>
+                        <ul class="dropdown">
+                            <li><a href="user_cp.html"><span>Painel do utilizador</span></a></li>
+                            <li><a href="user_list.html"><span>Lista de utilizadores</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="empresas parent"><a href="#"><span class="menu_hidden">Empresas</span></a>
+                        <ul class="dropdown">
+                            <li><a href="company_cp.html"><span>Painel da empresa</span></a></li>
+                            <li><a href="company_list.html"><span>Lista de empresas</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="contactos"><a href="contacts.html">Contactos</a></li>
+                    <li class="pesquisa_menu"><a href="search.html">Pesquisa</a></li>
+                </ul>
+            </nav>
+            <div class="recent_activity">
+                <h2>Actividade Recente</h2>
+                <p><a href="#">Dummy 1</a></p>
+                <p><a href="#">Dummy 2</a></p>
+                <p><a href="#">Empresa 1</a></p>
+                <p><a href="user_cp.html">Painel de Utilizador</a></p>
+            </div>
+        </aside><!-- .left-sidebar -->
+
+    </div><!-- .middle-->
+
+    <footer class="footer">
+        <span>DAWeb 2013</span>
+        <div class="authors">
+            <div class="contacts"><a href="about.html">Contactos</a></div>
+        </div>
+        <div class="validators"><p>
+            <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                <img
+                        src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+                        alt="Valid CSS!" />
+            </a>
+            <a href="http://validator.nu/">Valid HTML5</a>
+        </p></div>
+    </footer><!-- .footer -->
+
+</div><!-- .wrapper -->
+
+</body>
+</html>

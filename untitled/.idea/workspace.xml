@@ -4,14 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/index.html" line="120" mnemonic="0" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="42bdc3a3-d73e-4428-8944-d479f2eb1032" name="Default" comment="i">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo_test.asp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo_test_post.asp" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/about.html" afterPath="$PROJECT_DIR$/about.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/media-queries.css" afterPath="$PROJECT_DIR$/css/media-queries.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="42bdc3a3-d73e-4428-8944-d479f2eb1032" name="Default" comment="i" />
     <ignored path="untitled.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -108,7 +101,7 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="43" selection-start="337" selection-end="337" vertical-scroll-proportion="0.22867514" vertical-offset="0" max-vertical-offset="3672">
+            <state line="17" column="21" selection-start="621" selection-end="621" vertical-scroll-proportion="0.5553539" vertical-offset="0" max-vertical-offset="3672">
               <folding />
             </state>
           </provider>
@@ -499,7 +492,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="43" selection-start="337" selection-end="337" vertical-scroll-proportion="0.22867514" vertical-offset="0" max-vertical-offset="3672">
+        <state line="17" column="21" selection-start="621" selection-end="621" vertical-scroll-proportion="0.5553539" vertical-offset="0" max-vertical-offset="3672">
           <folding />
         </state>
       </provider>
