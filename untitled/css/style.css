@@ -211,6 +211,9 @@ a:hover {
 .post-content th {
     text-align: left;
 }
+.post-content .first_row {
+    border-bottom: 1px solid;
+}
 .user_cp_link {
     color:#000;
 }
@@ -232,14 +235,18 @@ a:hover.user_cp_link {
 }
 .comment-form textarea {
     width:100%;
+    resize:none;
 }
 .comment-form td {
     padding:15px !important;
     text-align: left;
     vertical-align: top;
 }
-.comment-form #button_row {
+.comment-form #button_row, #button_contact {
     text-align: right;
+}
+.comment-form #name, #user, #title {
+    width:75%;
 }
 .post-footer {
     text-align: right;
@@ -381,6 +388,12 @@ ul.vmenu li ul li a:hover {background-color: #454851; }
 #search_results_header {
     display:none;
 }
+#search_results a {
+    color:#000;
+}
+#search_results a:hover {
+    color:#ccc;
+}
 ul.tabs {
     height: 28px;
     line-height: 25px;
@@ -432,13 +445,13 @@ ul.tabs {
     text-decoration: none;
 }
 .authors {
-    position:absolute;
-    top:10%;
-    left:1%;
-    border: 1px solid #25272b;
-    cursor: pointer;
-    box-shadow: 0 2px 1px rgba(0,0,0,0.2),inset 1px 1px 0 rgba(255,255,255,0.1);
-}
+     position:absolute;
+     top:10%;
+     left:1%;
+     border: 1px solid #25272b;
+     cursor: pointer;
+     box-shadow: 0 2px 1px rgba(0,0,0,0.2),inset 1px 1px 0 rgba(255,255,255,0.1);
+ }
 
 .authors td {
     padding:1px;
@@ -448,4 +461,13 @@ ul.tabs {
     position:absolute;
     top:10%;
     right:1%;
+}
+.validators img {
+    border:0;
+    width:88px;
+    height:31px;
+}
+.no_logo {
+    font-size:200%;
+    padding:20px;
 }

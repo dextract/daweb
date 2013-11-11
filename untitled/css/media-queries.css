@@ -3,7 +3,7 @@
         width: 85%;
     }
     .content {
-        width: 60%;
+        width: 65%;
         padding: 3% 4%;
     }
     .left-sidebar {
@@ -39,7 +39,7 @@
         display:none;
     }
     .content {
-        width:100%;
+        width:98%;
         margin:0 auto;
     }
     .header {
@@ -64,5 +64,20 @@
     }
     .header {
         height: 100%;
+    }
+    .wrapper {
+        width:100%;
+    }
+    .validators {
+        display:none;
+    }
+    .vmenu {
+        font-size: 80% !important;
+    }
+    .content {
+        font-size: 80% !important;
+    }
+    .post-thumb {
+        display:none !important;
     }
 }

@@ -29,8 +29,12 @@ $(function() {
 
 $(function() {
     $(".post-title").click(function(){
-        $(this).siblings(".post-thumb").slideToggle("slow");
-        $(this).siblings(".post-content").slideToggle("slow");
+        if($(".post-content").is(":hidden") && (!($(".post-thumb").is(":hidden"))))
+            $(this).siblings(".post-content").slideToggle("slow");
+        else {
+            $(this).siblings(".post-thumb").slideToggle("slow");
+            $(this).siblings(".post-content").slideToggle("slow");
+        }
     });
 });
 
