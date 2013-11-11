@@ -81,3 +81,44 @@
         display:none !important;
     }
 }
+
+@media print{
+    body{
+        background-color: white;
+    }
+    .post-form{
+        display: none;
+    }
+    .footer{
+        display: none;
+    }
+    #navigation{
+        display: none;
+    }
+    .header .login_area{
+        display: none;
+    }
+    .pesquisa{
+        display: none;
+    }
+    .login_area{
+        display: none;
+    }
+    #navigation{
+        display: none;
+    }
+    .authors{
+        display: none;
+    }
+    .validators{
+        display: none;
+    }
+    .left-sidebar{
+        float: left;
+    }
+    .wrapper{
+        width: 100%;
+        margin: 0;
+        float: none;
+    }
+}
