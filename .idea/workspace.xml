@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="761936dc-35ec-4a75-a2bf-df97953debe1" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/production.rb" afterPath="$PROJECT_DIR$/config/environments/production.rb" />
     </list>
     <ignored path="letsgetpro.iws" />
@@ -12,7 +14,7 @@
     <file path="/style.css" changelist="761936dc-35ec-4a75-a2bf-df97953debe1" time="1386356414444" ignored="false" />
     <file path="/home.css.scss" changelist="761936dc-35ec-4a75-a2bf-df97953debe1" time="1386360257350" ignored="false" />
     <file path="/home_controller.rb" changelist="761936dc-35ec-4a75-a2bf-df97953debe1" time="1386357898399" ignored="false" />
-    <file path="/production.rb" changelist="761936dc-35ec-4a75-a2bf-df97953debe1" time="1386362095090" ignored="false" />
+    <file path="/production.rb" changelist="761936dc-35ec-4a75-a2bf-df97953debe1" time="1386362374797" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +46,7 @@
       <file leaf-file-name="production.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="35" selection-start="1046" selection-end="1046" vertical-scroll-proportion="0.6233766">
+            <state line="31" column="63" selection-start="1334" selection-end="1334" vertical-scroll-proportion="0.6103896">
               <folding />
             </state>
           </provider>
@@ -817,7 +819,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="35" selection-start="1046" selection-end="1046" vertical-scroll-proportion="0.6233766">
+        <state line="31" column="63" selection-start="1334" selection-end="1334" vertical-scroll-proportion="0.6103896">
           <folding />
         </state>
       </provider>
