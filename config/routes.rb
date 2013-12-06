@@ -1,9 +1,20 @@
 Letsgetpro::Application.routes.draw do
+  get "home/register"
+  get "home/report"
+  get "home/login"
+  get "home/contacts"
+  get "home/search"
+  get "home/company_list"
+  get "home/company_cp"
+  get "home/user_list"
+  get "home/user_cp"
+  get "home/about"
+  get "home/index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'home#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

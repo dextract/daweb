@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Let’s get pro!</title>
+  <meta name="keywords" content="empresas, contactos" />
+  <meta name="description" content="Let’s get pro!" />
+</head>
+
+<body>
+
+<div class="wrapper">
+  <header class="header">
+    <div class="logo_area">
+      <a href="index.html"><%= image_tag('logo.png') %></a>
+    </div>
+    <div class="menu_mobile">
+      <nav id="navigation_mobile">
+        <div class="no_logo">Let’s get pro!</div>
+        <ul class="vmenu">
+          <li class="home"><a href="index.html"><span class="menu_hidden">Home</span></a></li>
+          <li class="utilizador parent"><a href="#"><span class="menu_hidden">Utilizador</span></a>
+            <ul class="dropdown">
+              <li><a href="login.html"><span>Entrar/Registar-se</span></a></li>
+              <li><a href="user_cp.html"><span>Painel do utilizador</span></a></li>
+              <li><a href="user_list.html"><span>Lista de utilizadores</span></a></li>
+            </ul>
+          </li>
+          <li class="empresas parent"><a href="#"><span class="menu_selected">Empresas</span></a>
+            <ul class="dropdown">
+              <li><a href="company_cp.html"><span class="drop_selected">Painel da empresa</span></a></li>
+              <li><a href="company_list.html"><span>Lista de empresas</span></a></li>
+            </ul>
+          </li>
+          <li class="contactos"><a href="contacts.html">Contactos</a></li>
+          <li class="pesquisa_menu"><a href="search.html">Pesquisa</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="current_user">
+      Welcome, dummy!
+    </div>
+    <div class="login_area">
+      <div class="login_content">
+        Username&nbsp;<input type="text" name="username" id="username">
+        Password&nbsp;<input type="password" name="password" id="password">
+        &nbsp;<input type="submit" value="Entrar" id="login_button">
+        &nbsp;<a href="#">Registrar-se</a>
+      </div>
+    </div>
+    <div class="pesquisa">
+      Pesquisar
+      <form method="get" action="search.html">
+        <table>
+          <tr>
+            <td>
+              <input type="text" name="zoom_query" id="search_query">
+            </td>
+            <td>
+              <input type="submit" value="" id="search_button">
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </header><!-- .header-->
+
+  <div class="middle">
+
+    <div class="container">
+      <main class="content">
+        <div class="post-container">
+          <h3 class="post-title">Informação geral</h3>
+          <div class="post-content">
+            <table>
+              <tr>
+                <th>Nome:</th><td>Empresa 1</td>
+              </tr>
+              <tr>
+                <th>Presidente:</th><td><a class="user_cp_link" href="#">Dummy 55</a></td>
+              </tr>
+              <tr>
+                <th>Pais:</th><td><a class="user_cp_link" href="#">Portugal</a></td>
+              </tr>
+              <tr>
+                <th>Descrição:</th><td>Sobre Empresa 1</td>
+              </tr>
+              <tr>
+                <th>Área:</th><td><a class="user_cp_link" href="#">IT</a></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="post-container">
+          <h3 class="post-title">Colaboradores presentes</h3>
+          <div class="post-content">
+            <table>
+              <tr>
+                <td>Colaborador</td><td>Carga</td>
+              </tr>
+              <tr>
+                <td><a class="user_cp_link" href="#">Dummy 1</a></td><td><a class="user_cp_link" href="#">Programador</a></td>
+              </tr>
+              <tr>
+                <td><a class="user_cp_link" href="#">Dummy 2</a></td><td><a class="user_cp_link" href="#">Web Master</a></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="post-container">
+          <h3 class="post-title">Colaboradores passados</h3>
+          <div class="post-content">
+            <table>
+              <tr>
+                <td>Colaborador</td><td>Carga</td>
+              </tr>
+              <tr>
+                <td><a class="user_cp_link" href="#">Dummy 3</a></td><td><a class="user_cp_link" href="#">Programador</a></td>
+              </tr>
+              <tr>
+                <td><a class="user_cp_link" href="#">Dummy 4</a></td><td><a class="user_cp_link" href="#">Web Master</a></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </main><!-- .content -->
+    </div><!-- .container-->
+
+    <aside class="left-sidebar">
+      <div class="user_info">
+        <table>
+          <tr>
+            <td rowspan="3"><a href="user_cp.html"><img src="http://forum.predatornutrition.com/wp-content/sp-resources/forum-avatars/1355478852crash_test_dummy-resized.jpg"/></a></td>
+            <td>Dummy</td>
+          </tr>
+          <tr>
+            <td>22 anos</td>
+          </tr>
+          <tr>
+            <td>Portugal</td>
+          </tr>
+          <tr>
+            <td><a href="user_cp.html">Editar perfil</a></td>
+          </tr>
+        </table>
+      </div>
+      <nav id="navigation">
+        <ul class="vmenu">
+          <li class="home"><a href="index.html"><span class="menu_hidden">Home</span></a></li>
+          <li class="utilizador parent"><a href="#"><span class="menu_hidden">Utilizador</span></a>
+            <ul class="dropdown">
+              <li><a href="user_cp.html"><span>Painel do utilizador</span></a></li>
+              <li><a href="user_list.html"><span>Lista de utilizadores</span></a></li>
+            </ul>
+          </li>
+          <li class="empresas parent"><a href="#"><span class="menu_selected">Empresas</span></a>
+            <ul class="dropdown">
+              <li><a href="company_cp.html"><span class="drop_selected">Painel da empresa</span></a></li>
+              <li><a href="company_list.html"><span>Lista de empresas</span></a></li>
+            </ul>
+          </li>
+          <li class="contactos"><a href="contacts.html">Contactos</a></li>
+          <li class="pesquisa_menu"><a href="search.html">Pesquisa</a></li>
+        </ul>
+      </nav>
+      <div class="recent_activity">
+        <h2>Actividade Recente</h2>
+        <p><a href="#">Dummy 1</a></p>
+        <p><a href="#">Dummy 2</a></p>
+        <p><a href="#">Empresa 1</a></p>
+        <p><a href="user_cp.html">Painel de Utilizador</a></p>
+      </div>
+    </aside><!-- .left-sidebar -->
+
+  </div><!-- .middle-->
+
+  <footer class="footer">
+    <span>DAWeb 2013</span>
+    <div class="authors">
+      <div class="contacts"><a href="about.html">Contactos</a></div>
+    </div>
+    <div class="validators"><p>
+      <a href="http://jigsaw.w3.org/css-validator/check/referer">
+        <img
+        src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+        alt="Valid CSS!" />
+      </a>
+      <a href="http://validator.nu/">Valid HTML5</a>
+    </p></div>
+  </footer><!-- .footer -->
+
+</div><!-- .wrapper -->
+
+
+</body>
+</html>
