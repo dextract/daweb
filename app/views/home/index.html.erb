@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Let’s get pro!</title>
+  <meta name="keywords" content="empresas, contactos" />
+  <meta name="description" content="Let’s get pro!" />
+</head>
+
+<body>
+
+<div class="wrapper">
+  <header class="header">
+    <div class="logo_area">
+      <%= link_to image_tag('logo.png'), home_index_path %>
+    </div>
+    <div class="menu_mobile">
+      <nav id="navigation_mobile">
+        <div class="no_logo">Let’s get pro!</div>
+        <ul class="vmenu">
+          <li class="home"><%= link_to "Home", home_index_path, :class => "menu_selected" %></li>
+          <li class="utilizador parent"><a href="#"><span class="menu_hidden">Utilizador</span></a>
+            <ul class="dropdown">
+              <li><%= link_to content_tag(:span, "Entrar/Registar-se"), home_login_path %></li>
+              <li><%= link_to content_tag(:span, "Painel do utilizador"), home_user_cp_path %></li>
+              <li><%= link_to content_tag(:span, "Lista de utilizadores"), home_user_list_path %></li>
+            </ul>
+          </li>
+          <li class="empresas parent"><a href="#"><span class="menu_hidden">Empresa</span></a>
+            <ul class="dropdown">
+              <li><%= link_to content_tag(:span, "Painel da empresa"), home_company_cp_path %></li>
+              <li><%= link_to content_tag(:span, "Lista de empresas"), home_company_list_path %></li>
+            </ul>
+          </li>
+          <li class="contactos"><%= link_to "Contactos", home_contacts_path %></li>
+          <li class="pesquisa_menu"><%= link_to "Pesquisa", home_search_path %></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="current_user">
+      Welcome, dummy!
+    </div>
+    <div class="login_area">
+      <div class="login_content">
+        Username&nbsp;<input type="text" name="username" id="username">
+        Password&nbsp;<input type="password" name="password" id="password">
+        &nbsp;<input type="submit" value="Entrar" id="login_button">
+        &nbsp;<%= link_to "Registar-se", home_register_path %>
+      </div>
+    </div>
+    <div class="pesquisa">
+      Pesquisar
+      <form method="get" action="search.html">
+        <table>
+          <tr>
+            <td>
+              <input type="text" name="zoom_query" id="search_query">
+            </td>
+            <td>
+              <input type="submit" value="" id="search_button">
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </header><!-- .header-->
+
+  <div class="middle">
+
+    <div class="container">
+      <main class="content">
+        <div class="post-container">
+          <h3 class="post-title">Post Title</h3>
+          <div class="post-thumb"><img src="http://www.prostomac.com/wp-content/uploads/2013/04/dummy-escape-icon.jpg" alt="thumb" /></div>
+          <div class="post-content">
+            <p>post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc  </p>
+          </div>
+          <div class="post-footer">
+            <img src="http://d1vu33opq27khs.cloudfront.net/application-com.LevelZed.DummyEscapeLite-icon" alt="avatar"/>
+            <span class="name"><a href="#">Dummy</a></span> on 19.01.2013
+            <span class="share"><a href="#">Partilhar</a></span>
+          </div>
+        </div>
+        <div class="post-container">
+          <h3 class="post-title">Post Title</h3>
+          <div class="post-thumb"><img src="http://www.prostomac.com/wp-content/uploads/2013/04/dummy-escape-icon.jpg" alt="thumb"/></div>
+          <div class="post-content">
+            <p>post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc  </p>
+          </div>
+          <div class="post-footer">
+            <img src="http://d1vu33opq27khs.cloudfront.net/application-com.LevelZed.DummyEscapeLite-icon" alt="avatar"/>
+            <span class="name"><a href="#">Dummy</a></span> on 18.01.2013
+            <span class="share"><a href="#">Partilhar</a></span>
+          </div>
+        </div>
+        <div class="post-container">
+          <h3 class="post-title">Post Title</h3>
+          <div class="post-thumb"><img src="http://www.prostomac.com/wp-content/uploads/2013/04/dummy-escape-icon.jpg" alt="thumb"/></div>
+          <div class="post-content">
+            <p>post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc post desc  </p>
+          </div>
+          <div class="post-footer"><img src="http://d1vu33opq27khs.cloudfront.net/application-com.LevelZed.DummyEscapeLite-icon" alt="avatar"/>
+            <span class="name"><a href="#">Dummy</a></span> on 17.01.2013
+            <span class="share"><a href="#">Partilhar</a></span>
+          </div>
+        </div>
+        <div class="post-form">
+          <h3 class="post-form-title">Post a new entry</h3>
+          <form class="comment-form">
+            <table>
+              <tr>
+                <td>Title:</td><td><input type="text" name="name" id="name"></td>
+              </tr>
+              <tr>
+                <td>Text:</td><td><textarea name="post" id="post" cols="50" rows="10"></textarea></td>
+              </tr>
+              <tr>
+                <td colspan="2" id="button_row"><input type="submit"></td>
+              </tr>
+            </table>
+          </form>
+        </div>
+      </main><!-- .content -->
+    </div><!-- .container-->
+
+    <aside class="left-sidebar">
+      <div class="user_info">
+        <table>
+          <tr>
+            <td rowspan="3"><a href="user_cp.html"><img src="http://forum.predatornutrition.com/wp-content/sp-resources/forum-avatars/1355478852crash_test_dummy-resized.jpg" alt="avatar"/></a></td>
+            <td>Dummy</td>
+          </tr>
+          <tr>
+            <td>22 anos</td>
+          </tr>
+          <tr>
+            <td>Portugal</td>
+          </tr>
+          <tr>
+            <td><%= link_to "Editar perfil", home_user_cp_path%></td><td>&nbsp;</td>
+          </tr>
+        </table>
+      </div>
+      <nav id="navigation">
+        <ul class="vmenu">
+          <li class="home"><%= link_to "Home", home_index_path, :class => "menu_selected" %></li>
+          <li class="utilizador parent"><a href="#"><span class="menu_hidden">Utilizador</span></a>
+            <ul class="dropdown">
+              <li><%= link_to content_tag(:span, "Painel do utilizador"), home_user_cp_path%></li>
+              <li><%= link_to content_tag(:span, "Lista de utilizadores"), home_user_list_path%></li>
+            </ul>
+          </li>
+          <li class="empresas parent"><a href="#"><span class="menu_hidden">Empresa</span></a>
+            <ul class="dropdown">
+              <li><%= link_to content_tag(:span, "Painel da empresa"), home_company_cp_path%></li>
+              <li><%= link_to content_tag(:span, "Lista de empresas"), home_company_list_path%></li>
+            </ul>
+          </li>
+          <li class="contactos"><%= link_to "Contactos", home_contacts_path %></li>
+          <li class="pesquisa_menu"><%= link_to "Pesquisa", home_search_path %></li>
+        </ul>
+      </nav>
+      <div class="recent_activity">
+        <h2>Actividade Recente</h2>
+        <p><a href="#">Dummy 1</a></p>
+        <p><a href="#">Dummy 2</a></p>
+        <p><a href="#">Empresa 1</a></p>
+      </div>
+    </aside><!-- .left-sidebar -->
+
+  </div><!-- .middle-->
+
+  <footer class="footer">
+    <span>DAWeb 2013</span>
+    <div class="authors">
+      <div class="contacts"><%= link_to "Contactos", home_about_path %></div>
+    </div>
+    <div class="validators"><p>
+      <a href="http://jigsaw.w3.org/css-validator/check/referer">
+        <img
+        src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+        alt="Valid CSS!" />
+      </a>
+      <a href="http://validator.nu/">Valid HTML5</a>
+    </p></div>
+  </footer><!-- .footer -->
+
+</div><!-- .wrapper -->
+
+
+</body>
+</html>
