@@ -1,4 +1,12 @@
 Letsgetpro::Application.routes.draw do
+  resources :activities
+
+  resources :companies
+
+  resources :users
+
+  resources :news
+
   get "home/register"
   get "home/report"
   get "home/login"
