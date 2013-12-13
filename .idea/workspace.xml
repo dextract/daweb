@@ -135,7 +135,7 @@
       <file leaf-file-name="_header.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/_header.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="26" selection-start="1731" selection-end="1731" vertical-scroll-proportion="-4.375">
+            <state line="42" column="25" selection-start="1757" selection-end="1757" vertical-scroll-proportion="-5.0">
               <folding>
                 <element signature="tag#div#1;tag#header#0" expanded="false" />
               </folding>
@@ -146,7 +146,7 @@
       <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="12" selection-start="485" selection-end="485" vertical-scroll-proportion="0.66233766">
+            <state line="16" column="6" selection-start="472" selection-end="472" vertical-scroll-proportion="0.6233766">
               <folding />
             </state>
           </provider>
@@ -936,13 +936,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="23" selection-start="5522" selection-end="5522" vertical-scroll-proportion="-23.75">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20131213052835_add_index_to_users_email.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="8" selection-start="55" selection-end="153" vertical-scroll-proportion="0.0">
@@ -1036,9 +1029,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile.lock">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="13" selection-start="385" selection-end="385" vertical-scroll-proportion="0.6233766">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/_header.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="26" selection-start="1731" selection-end="1731" vertical-scroll-proportion="-4.375">
+        <state line="42" column="25" selection-start="1757" selection-end="1757" vertical-scroll-proportion="-5.0">
           <folding>
             <element signature="tag#div#1;tag#header#0" expanded="false" />
           </folding>
@@ -1047,7 +1047,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="12" selection-start="485" selection-end="485" vertical-scroll-proportion="0.66233766">
+        <state line="16" column="6" selection-start="472" selection-end="472" vertical-scroll-proportion="0.6233766">
           <folding />
         </state>
       </provider>
