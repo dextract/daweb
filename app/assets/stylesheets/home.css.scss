@@ -109,6 +109,7 @@ body {
 
 .login_content {
   margin: 0 auto;
+  padding-bottom: 5px;
 }
 .login_content input {
   width:70px;
@@ -116,7 +117,6 @@ body {
   height:15px;
   margin-top: 2.5%;
   font-size:80%;
-
 }
 
 a {
@@ -191,6 +191,23 @@ a:hover {
 .content {
 	margin: 2% 2% 0 30%;
     height: 100%;
+}
+
+.register_form {
+  margin: auto;
+  overflow: auto;
+  text-align: center;
+}
+
+.register_form table {
+  text-align: center;
+  margin-left: 25%;
+}
+
+.register_form td {
+  padding: 10px;
+  text-align: left;
+  vertical-align: top;
 }
 
 .post-container, .post-form {
