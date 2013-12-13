@@ -1,0 +1,59 @@
+
+      <main class="content">
+        <% flash.each do |key, value| %>
+            <div class="alert alert-<%= key %>"><%= value %></div>
+        <% end %>
+        <div class="post-container">
+          <h3 class="post-title">CV de <%= @user.name %></h3>
+          <div class="post-content">
+            <table>
+              <tr>
+                <th>Imagem:</th><td><%=image_tag('users/'+@user.id.to_s+'.png') %></td>
+              </tr>
+              <tr>
+                <th>Nome:</th><td><%= @user.name %></td>
+              </tr>
+              <tr>
+                <th>Email:</th><td><%= @user.email %></td>
+              </tr>
+              <tr>
+                <th>Idade:</th><td><%= @user.age %></td>
+              </tr>
+              <tr>
+                <th>Pais:</th><td><%= @user.country %></td>
+              </tr>
+              <tr>
+                <th>Descrição:</th><td><%= @user.description %>y</td>
+              </tr>
+              <tr>
+                <th>Cargos correntes:</th><td>Programador na <a class="user_cp_link" href="#">Empresa 1</a></td>
+              </tr>
+              <tr>
+                <th>Cargos passados:</th><td>Web Master na <a class="user_cp_link" href="#">Empresa 2</a></td><td>Network Admin na <a href="#" class="user_cp_link">Empresa 2</a></td>
+              </tr>
+              <tr>
+                <th><%= link_to 'Modificar o perfil', edit_user_path(@user) %></th><td></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="post-container">
+          <h3 class="post-title">Pedidos de contacto pendentes</h3>
+          <div class="post-content">
+            <table>
+              <tr class="first_row">
+                <td>Contactante</td><td>Assunto</td>
+              </tr>
+              <tr>
+                <td><a class="user_cp_link" href="#">Empresa 3</a></td><td><a class="user_cp_link" href="#">Emprego: Programador</a></td>
+              </tr>
+              <tr>
+                <td><a class="user_cp_link" href="#">Empresa 4</a></td><td><a class="user_cp_link" href="#">Emprego: Programador</a></td>
+              </tr>
+              <tr>
+                <td><a class="user_cp_link" href="#">Dummy 2</a></td><td><a class="user_cp_link" href="#">What’s up?</a></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </main><!-- .content -->

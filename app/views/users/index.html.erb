@@ -1,0 +1,45 @@
+      <main class="content">
+        <% flash.each do |key, value| %>
+            <div class="alert alert-<%= key %>"><%= value %></div>
+        <% end %>
+        <div class="post-container">
+          <h3 class="post-title">Lista de utilizadores</h3>
+          <div class="post-content">
+            <table>
+              <thead>
+              <!--<tr>-->
+                <th>Imagem</th>
+                <th>Nome</th>
+                <th>Idade</th>
+                <th>País</th>
+                <th>Descrição</th>
+                <th></th>
+                <th></th>
+                <th></th>
+              </tr>
+              </thead>
+              <tbody>
+              <% @users.each do |user| %>
+                  <tr>
+                    <td><%= user.picture %></td>
+                    <td><%= user.name %></td>
+                    <td><%= user.age %></td>
+                    <td><%= user.country %></td>
+                    <td><%= user.description %></td>
+                    <td><%= link_to 'Show', user %></td>
+                    <td><%= link_to 'Edit', edit_user_path(user) %></td>
+                    <% if current_user.admin? && !current_user?(user) %>
+                        <td><%= link_to "delete", user, method: :delete, data: { confirm: "You sure?" } %></td>
+                    <% end %>
+                  </tr>
+              <% end %>
+              </tbody>
+            </table>
+            <div class="pagination">
+            <%= will_paginate %>
+            </div>
+          </div>
+
+        </div>
+
+      </main><!-- .content -->

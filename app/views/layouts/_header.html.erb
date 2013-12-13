@@ -1,0 +1,69 @@
+<header class="header">
+
+  <div class="logo_area">
+    <%= link_to image_tag('logo.png', :border=>0), root_path %>
+  </div>
+
+  <div class="menu_mobile">
+    <nav id="navigation_mobile">
+      <div class="no_logo"><%= link_to 'Let’s get pro!', root_path %> </div>
+      <ul class="vmenu">
+        <li class="home"><%= link_to "Home", root_path, :class => "menu_hidden" %></li>
+        <% if signed_in? %>
+            <li class="utilizador parent"><a href="#"><span class="menu_selected">Utilizador</span></a>
+              <ul class="dropdown">
+                <li><%= link_to content_tag(:span, "Painel do utilizador"), @logged_user %></li>
+                <li><%= link_to content_tag(:span, "Lista de utilizadores"), home_user_list_path%></li>
+              </ul>
+            </li>
+            <li class="empresas parent"><a href="#"><span class="menu_hidden">Empresas</span></a>
+              <ul class="dropdown">
+                <li><%= link_to content_tag(:span, "Painel da empresa"), home_company_cp_path%></li>
+                <li><%= link_to content_tag(:span, "Lista de empresas"), home_company_list_path%></li>
+              </ul>
+            </li>
+            <li class="contactos"><%= link_to "Contactos", home_contacts_path %></li>
+        <% else %>
+            <li><%= link_to content_tag(:span, "Login"), signin_path %></li>
+        <% end %>
+        <li class="pesquisa_menu"><%= link_to "Pesquisa", home_search_path %></li>
+      </ul>
+    </nav>
+  </div>
+
+  <% if signed_in? %>
+      <div class="current_user">
+        Bem-vindo, <%= current_user.name %>! <%= link_to "Sign out", signout_path, method: "delete" %>
+      </div>
+  <% else %>
+      <div class="login_area">
+        <div class="login_content">
+          <%= form_for :session, url: url_for(:controller => 'sessions', :action => 'create') do |f| %>
+              <%= f.label :name %>
+              <%= f.text_field :name %>
+
+              <%= f.label :password %>
+              <%= f.password_field :password %>
+
+              <%= f.submit "Sign in" %>
+          <% end %>
+        </div>
+        <p>Utilizador novo? <%= link_to "Registe-se!", signup_path %></p>
+      </div>
+  <% end %>
+  <div class="pesquisa">
+    Pesquisar
+    <form method="get" action="search.html">
+      <table>
+        <tr>
+          <td>
+            <input type="text" name="zoom_query" id="search_query">
+          </td>
+          <td>
+            <input type="submit" value="" id="search_button">
+          </td>
+        </tr>
+      </table>
+    </form>
+  </div>
+</header><!-- .header-->

@@ -1,0 +1,17 @@
+<main class="content">
+  <% flash.each do |key, value| %>
+      <div class="alert alert-<%= key %>"><%= value %></div>
+  <% end %>
+    <%= form_for(:session, url: sessions_path) do |f| %>
+
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+
+        <%= f.label :password %>
+        <%= f.password_field :password %>
+
+        <%= f.submit "Sign in" %> New user? <%= link_to "Sign up now!", signup_path, {:style=>'color:black;'}  %>
+    <% end %>
+
+
+</main>
