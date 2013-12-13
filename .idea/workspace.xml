@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="761936dc-35ec-4a75-a2bf-df97953debe1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20131213052835_add_index_to_users_email.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20131213053539_add_password_digest_to_users.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20131213065740_add_remember_token_to_users.rb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/media-queries.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/media-queries.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.rakeTasks" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/home.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/home.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/index.html.erb" afterPath="$PROJECT_DIR$/app/views/home/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/letsgetpro.iml" afterPath="$PROJECT_DIR$/.idea/letsgetpro.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="letsgetpro.iws" />
@@ -85,6 +74,7 @@
     <file path="/_header.html.erb" changelist="761936dc-35ec-4a75-a2bf-df97953debe1" time="1386938260881" ignored="false" />
     <file path="/application.html.erb" changelist="761936dc-35ec-4a75-a2bf-df97953debe1" time="1386933356072" ignored="false" />
     <file path="/_left_sidebar.html.erb" changelist="761936dc-35ec-4a75-a2bf-df97953debe1" time="1386933692914" ignored="false" />
+    <file path="/.gitignore" changelist="761936dc-35ec-4a75-a2bf-df97953debe1" time="1386938605500" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,22 +132,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="schema.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/schema.rb">
+      <file leaf-file-name="_header.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/layouts/_header.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="42" selection-start="1668" selection-end="1668" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="41" column="26" selection-start="1731" selection-end="1731" vertical-scroll-proportion="-4.375">
+              <folding>
+                <element signature="tag#div#1;tag#header#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_header.html.erb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/_header.html.erb">
+      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="26" selection-start="1731" selection-end="1731" vertical-scroll-proportion="0.29085872">
-              <folding>
-                <element signature="tag#div#1;tag#header#0" expanded="false" />
-              </folding>
+            <state line="17" column="12" selection-start="485" selection-end="485" vertical-scroll-proportion="0.66233766">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -220,7 +210,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/views/home/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/_left_sidebar.html.erb" />
@@ -236,6 +225,7 @@
         <option value="$PROJECT_DIR$/app/views/users/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/_header.html.erb" />
         <option value="$PROJECT_DIR$/app/views/sessions/new.html.erb" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -946,13 +936,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/db/migrate/20131213053539_add_password_digest_to_users.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="48" selection-start="74" selection-end="118" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="38" column="23" selection-start="5522" selection-end="5522" vertical-scroll-proportion="-23.75">
@@ -1055,10 +1038,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/_header.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="26" selection-start="1731" selection-end="1731" vertical-scroll-proportion="0.29085872">
+        <state line="41" column="26" selection-start="1731" selection-end="1731" vertical-scroll-proportion="-4.375">
           <folding>
             <element signature="tag#div#1;tag#header#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="12" selection-start="485" selection-end="485" vertical-scroll-proportion="0.66233766">
+          <folding />
         </state>
       </provider>
     </entry>
