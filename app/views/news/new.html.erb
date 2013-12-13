@@ -1,5 +1,27 @@
-<h1>New news</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Back', news_index_path %>
+<main class="content">
+  <div class="register_form">
+    <% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %>"><%= value %></div>
+    <% end %>
+    <table>
+      <%= form_for @news do |f| %>
+          <tr>
+            <td><%= f.label :title %></td>
+            <td><%= f.text_field :title %></td>
+          </tr>
+          <tr>
+            <td><%= f.label :content %></td>
+            <td><%= f.text_field :content %></td>
+          </tr>
+          <tr>
+            <td><%= f.label :photo %></td>
+            <td><%= f.text_field :photo %></td>
+          </tr>
+          <%=f.hidden_field :user_id, value: current_user.id %>
+          <tr>
+            <td colspan="2" style="text-align: center"><%= f.submit "Adicionar a noticia" %></td>
+          </tr>
+      <% end %>
+    </table>
+  </div>
+</main>

@@ -1,18 +1,14 @@
 Letsgetpro::Application.routes.draw do
   resources :activities
-
   resources :companies
-
   resources :users
-
   resources :news
-
   resources :sessions, only: [:new, :create, :destroy]
 
   match '/signup',  to: 'users#new',            via: 'get'
   match '/signin',  to: 'sessions#new',         via: 'get'
-
   match '/signout', to: 'sessions#destroy',     via: 'delete'
+  match '/search',  to: 'home#search',          via: 'get'
 
   get "home/register"
   get "home/report"
@@ -29,7 +25,7 @@ Letsgetpro::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'home#index'
+  root 'news#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

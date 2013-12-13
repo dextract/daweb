@@ -5,16 +5,32 @@
 
     <% @news.each do |news| %>
       <div class="post-container">
-        <h3 class="post-title"><%= news.title %></h3>
+        <h3 class="post-title"><%= news.title %>
+        </h3>
         <div class="post-thumb"><%= image_tag 'news/'+news.id.to_s+'.png' %></div>
         <div class="post-content"><p><%= news.content %></p></div>
-        <div class="post-footer"><%= image_tag 'users/'+news.user_id.to_s+'.png', :style=>'width:5%;' %>
-        <%= link_to User.find(news.user_id).name, user_path(news.user_id), :class => "name" %> on <%= news.created_at %> </div>
+        <div class="post-footer">
+          <% if current_user.admin? %>
+              <%= link_to "Apagar a notícia", news, method: :delete, data: { confirm: "You sure?" }, :style=>'float:left;' %>
+          <% end %>
+          <%= image_tag 'users/'+news.user_id.to_s+'.png', :style=>'width:5%;' %>
+        <%= link_to User.find(news.user_id).name, user_path(news.user_id), :class => "name" %> on <%= news.created_at %>
+        </div>
       </div>
     <% end %>
-    <div class="pagination">
-        <%= will_paginate %>
-    </div>
 
-<%= link_to 'New News', new_news_path %>
+
+
+
+  <div class="post-form">
+    <h3 class="post-form-title"><%= link_to 'Adicionar notícia', new_news_path %></h3>
+
+
+      </div>
+  <div class="pagination">
+    <%= will_paginate %>
+  </div>
+
+
+
 </main>

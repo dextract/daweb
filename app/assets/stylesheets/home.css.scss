@@ -426,9 +426,7 @@ ul.vmenu li ul li a:hover {background-color: #454851; }
 #search_results {
    margin-right: 2%;
 }
-#search_results_header {
-    display:none;
-}
+
 #search_results a {
     color:#000;
 }
@@ -556,6 +554,7 @@ a:hover.black_link {
 
 .pagination a {
   float:left;
-  padding:2px;
+  padding:10px;
+  margin-bottom:5px;
   color:black;
 }

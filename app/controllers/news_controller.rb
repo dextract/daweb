@@ -1,15 +1,14 @@
 class NewsController < ApplicationController
-  before_action :set_news, only: [:show, :edit, :update, :destroy]
-
   # GET /news
   # GET /news.json
   def index
-    @news = News.paginate(page: params[:page])
+    @news = News.paginate(:page => params[:page], :per_page => 5)
   end
 
   # GET /news/1
   # GET /news/1.json
   def show
+    @news = News.find(params[:id])
   end
 
   # GET /news/new
@@ -19,22 +18,18 @@ class NewsController < ApplicationController
 
   # GET /news/1/edit
   def edit
+    @news = News.find(params[:id])
   end
 
-  # POST /news
-  # POST /news.json
   def create
     @news = News.new(news_params)
-
-    respond_to do |format|
       if @news.save
-        format.html { redirect_to @news, notice: 'News was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @news }
+        flash[:success] = "News added"
+        redirect_to root_path
       else
-        format.html { render action: 'new' }
-        format.json { render json: @news.errors, status: :unprocessable_entity }
+        flash.now[:error] = "News not added"
+        render 'new'
       end
-    end
   end
 
   # PATCH/PUT /news/1
@@ -51,14 +46,10 @@ class NewsController < ApplicationController
     end
   end
 
-  # DELETE /news/1
-  # DELETE /news/1.json
   def destroy
-    @news.destroy
-    respond_to do |format|
-      format.html { redirect_to news_index_url }
-      format.json { head :no_content }
-    end
+    News.find(params[:id]).destroy
+    flash[:success] = "News deleted."
+    redirect_to root_path
   end
 
   private
@@ -69,6 +60,6 @@ class NewsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def news_params
-      params.require(:news).permit(:photo, :title, :timestamp)
+      params.require(:news).permit(:photo, :title, :content, :user_id)
     end
 end
