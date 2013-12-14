@@ -33,7 +33,7 @@ class UsersController < ApplicationController
       flash[:success] = "Profile updated"
       redirect_to @user
     else
-      flash.now[:error] = "Password cannot be empty"
+      flash.now[:error] = "Wrong password/Passwords do not match"
       render 'edit'
     end
   end

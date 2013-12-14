@@ -2,8 +2,8 @@
       <main class="content">
         <%= form_tag("/search", method: "get") do %>
             <%= label_tag(:query, "Search for:") %>
-            <%= text_field_tag(:query) %>
-            <%= submit_tag("Search") %>
+            <%= text_field_tag :query, '', :id => 'search_query' %>
+            <%= submit_tag "Pesquisar", :id => 'search_button' %>
         <% end %>
 
         <br>
