@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="761936dc-35ec-4a75-a2bf-df97953debe1" name="Default" comment="" />
+    <list default="true" id="761936dc-35ec-4a75-a2bf-df97953debe1" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="letsgetpro.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="761936dc-35ec-4a75-a2bf-df97953debe1" time="1387052443946" ignored="false" />
@@ -181,7 +184,7 @@
       <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="8" selection-start="336" selection-end="336" vertical-scroll-proportion="0.23333333">
+            <state line="9" column="0" selection-start="338" selection-end="411" vertical-scroll-proportion="0.3">
               <folding />
             </state>
           </provider>
@@ -1099,7 +1102,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="8" selection-start="336" selection-end="336" vertical-scroll-proportion="0.23333333">
+        <state line="9" column="0" selection-start="338" selection-end="411" vertical-scroll-proportion="0.3">
           <folding />
         </state>
       </provider>
