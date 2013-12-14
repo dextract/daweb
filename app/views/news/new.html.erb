@@ -10,12 +10,12 @@
             <td><%= f.text_field :title %></td>
           </tr>
           <tr>
-            <td><%= f.label :content %></td>
-            <td><%= f.text_field :content %></td>
-          </tr>
-          <tr>
             <td><%= f.label :photo %></td>
             <td><%= f.text_field :photo %></td>
+          </tr>
+          <tr>
+            <td><%= f.label :content %></td>
+            <td><%= f.text_area :content, :size => "40x15" %></td>
           </tr>
           <%=f.hidden_field :user_id, value: current_user.id %>
           <tr>

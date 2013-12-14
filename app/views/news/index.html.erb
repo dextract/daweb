@@ -10,7 +10,8 @@
         <div class="post-thumb"><%= image_tag 'news/'+news.id.to_s+'.png' %></div>
         <div class="post-content"><p><%= news.content %></p></div>
         <div class="post-footer">
-          <% if current_user.admin? %>
+
+          <% if signed_in? && current_user.admin? %>
               <%= link_to "Apagar a notícia", news, method: :delete, data: { confirm: "You sure?" }, :style=>'float:left;' %>
           <% end %>
           <%= image_tag 'users/'+news.user_id.to_s+'.png', :style=>'width:5%;' %>

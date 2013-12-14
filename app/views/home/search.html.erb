@@ -8,30 +8,42 @@
 
         <br>
         <div id="search_results_header">
-          <%= @users_found.length %> users have been found!<br>
-          <div id="search_results">
+          <%= @users_found.count %> users matching the query have been found!<br>
+        </div>
+
+        <div id="search_results">
             <ul class="tabs">
               <li class="current">Utilizadores</li>
               <li>Empresas</li>
             </ul>
 
             <div class="box visible">
-
-              <ul>
+              <table>
                 <% @users_found.each do |t| %>
-                    <li><%= link_to t.name, user_path(t) %></li>
+                    <tr>
+                        <td><%= link_to t.name, user_path(t) %></td>
+                        <% if signed_in? %>
+                            <% if current_user.admin? %>
+                                <td><%= link_to 'Edit', edit_user_path(t) %></td>
+                                <% if !current_user?(t) %>
+                                    <td><%= link_to 'Delete', t, method: :delete, data: { confirm: "You sure?" } %></td>
+                                <% end %>
+                          <% end %>
+                        <% end %>
+                    </tr>
                 <% end %>
-              </ul>
-
-
-
+              </table>
+              <div class="pagination">
+                <%= will_paginate @users_found %>
+              </div>
             </div>
+
             <div class="box">
               <p><a href="#">Empresa 1</a></p>
               <p><a href="#">Empresa 2</a></p>
               <p><a href="#">Empresa 3</a></p>
             </div>
-          </div>
         </div>
+
       </main><!-- .content -->
 

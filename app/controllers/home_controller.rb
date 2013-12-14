@@ -7,7 +7,7 @@ class HomeController < ApplicationController
 
   def search
     if params[:query]
-      @users_found = User.where("name LIKE (?)", "%#{params[:query]}%")
+      @users_found = User.where("name LIKE (?)", "%#{params[:query]}%").paginate(:page => params[:page])
     else
       @users_found = []
     end
