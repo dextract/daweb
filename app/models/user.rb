@@ -7,7 +7,9 @@ class User < ActiveRecord::Base
             uniqueness: { case_sensitive: false }
   validates :password, length: { minimum: 6 }
   has_secure_password
-  has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
+  has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" },
+                    :default_url => "/images/:style/missing.png", :storage => :dropbox,
+                    :dropbox_credentials => Rails.root.join("config/dropbox_config.yml")
 
   def User.new_remember_token
     SecureRandom.urlsafe_base64
