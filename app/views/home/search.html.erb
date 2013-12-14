@@ -7,6 +7,8 @@
         <% end %>
 
         <br>
+        <% if @users_found.count>0 %>
+
         <div id="search_results_header">
           <%= @users_found.count %> users matching the query have been found!<br>
         </div>
@@ -34,7 +36,9 @@
                 <% end %>
               </table>
               <div class="pagination">
+
                 <%= will_paginate @users_found %>
+
               </div>
             </div>
 
@@ -44,6 +48,7 @@
               <p><a href="#">Empresa 3</a></p>
             </div>
         </div>
+        <% end %>
 
       </main><!-- .content -->
 

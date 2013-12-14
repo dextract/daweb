@@ -1,7 +1,7 @@
 <main class="content">
     <div class="register_form">
     <table>
-        <%= form_for(@user) do |f| %>
+        <%= form_for(@user, :html => { :multipart => true }) do |f| %>
           <%= render 'shared/error_messages' %>
             <tr>
                 <td><%= f.label :name %></td>
@@ -30,6 +30,10 @@
             <tr>
                 <td><%= f.label :description %></td>
                 <td><%= f.text_area :description %></td>
+            </tr>
+            <tr>
+            <td><%= f.label :avatar %></td>
+            <td><%= f.file_field :avatar %></td>
             </tr>
             <tr>
                 <td colspan="2" style="text-align: center"><%= f.submit "Criar a conta" %></td>

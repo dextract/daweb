@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131213153816) do
+ActiveRecord::Schema.define(version: 20131214203940) do
 
   create_table "activities", force: true do |t|
     t.string   "name"
@@ -39,6 +39,10 @@ ActiveRecord::Schema.define(version: 20131213153816) do
     t.datetime "updated_at"
     t.string   "content"
     t.integer  "user_id"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   add_index "news", ["user_id", "created_at"], name: "index_news_on_user_id_and_created_at"
@@ -54,7 +58,11 @@ ActiveRecord::Schema.define(version: 20131213153816) do
     t.string   "password_digest"
     t.string   "remember_token"
     t.string   "email"
-    t.boolean  "admin",           default: false
+    t.boolean  "admin",               default: false
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
