@@ -22,12 +22,13 @@
 
 
 
-
+  <% if signed_in? %>
   <div class="post-form">
     <h3 class="post-form-title"><%= link_to 'Adicionar notícia', new_news_path %></h3>
 
 
       </div>
+      <% end %>
   <div class="pagination">
     <%= will_paginate %>
   </div>

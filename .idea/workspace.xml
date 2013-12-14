@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="761936dc-35ec-4a75-a2bf-df97953debe1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20131213153816_create_news.rb" afterPath="$PROJECT_DIR$/db/migrate/20131213153816_create_news.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/news/index.html.erb" afterPath="$PROJECT_DIR$/app/views/news/index.html.erb" />
     </list>
     <ignored path="letsgetpro.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="761936dc-35ec-4a75-a2bf-df97953debe1" time="1387056990854" ignored="false" />
     <file path="/routes.rb" changelist="761936dc-35ec-4a75-a2bf-df97953debe1" time="1386967671834" ignored="false" />
-    <file path="/index.html.erb" changelist="761936dc-35ec-4a75-a2bf-df97953debe1" time="1387054805687" ignored="false" />
+    <file path="/index.html.erb" changelist="761936dc-35ec-4a75-a2bf-df97953debe1" time="1387059258901" ignored="false" />
     <file path="/style.css" changelist="761936dc-35ec-4a75-a2bf-df97953debe1" time="1386356414444" ignored="false" />
     <file path="/home.css.scss" changelist="761936dc-35ec-4a75-a2bf-df97953debe1" time="1387045196122" ignored="false" />
     <file path="/home_controller.rb" changelist="761936dc-35ec-4a75-a2bf-df97953debe1" time="1387044350625" ignored="false" />
@@ -147,17 +147,19 @@
       <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/users/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="50" selection-start="1200" selection-end="1220" vertical-scroll-proportion="-12.125">
+            <state line="17" column="24" selection-start="591" selection-end="591" vertical-scroll-proportion="-3.375">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="20131213153816_create_news.rb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/db/migrate/20131213153816_create_news.rb">
+      <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/news/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="20" selection-start="129" selection-end="129" vertical-scroll-proportion="0.16666667">
-              <folding />
+            <state line="30" column="12" selection-start="1012" selection-end="1012" vertical-scroll-proportion="0.7394366">
+              <folding>
+                <marker date="1387059258727" expanded="true" signature="1012:1087" placeholder="if ... end" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -200,7 +202,6 @@
         <option value="$PROJECT_DIR$/db/migrate/20131214203940_add_attachment_to_news.rb" />
         <option value="$PROJECT_DIR$/app/controllers/news_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/news/new.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/news/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/home/search.html.erb" />
         <option value="$PROJECT_DIR$/app/models/news.rb" />
         <option value="$PROJECT_DIR$/app/views/users/index.html.erb" />
@@ -209,6 +210,7 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/db/migrate/20131213153816_create_news.rb" />
+        <option value="$PROJECT_DIR$/app/views/news/index.html.erb" />
       </list>
     </option>
   </component>
@@ -1022,23 +1024,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/news/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="14" selection-start="642" selection-end="642" vertical-scroll-proportion="-10.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/users/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="82" selection-start="865" selection-end="865" vertical-scroll-proportion="-3.75">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/users/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="50" selection-start="1200" selection-end="1220" vertical-scroll-proportion="-12.125">
           <folding />
         </state>
       </provider>
@@ -1108,8 +1096,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20131213153816_create_news.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="20" selection-start="129" selection-end="129" vertical-scroll-proportion="0.16666667">
+        <state line="12" column="18" selection-start="257" selection-end="257" vertical-scroll-proportion="0.4">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/users/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="24" selection-start="591" selection-end="591" vertical-scroll-proportion="-3.375">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/news/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="12" selection-start="1012" selection-end="1012" vertical-scroll-proportion="0.7394366">
+          <folding>
+            <marker date="1387059258727" expanded="true" signature="1012:1087" placeholder="if ... end" />
+          </folding>
         </state>
       </provider>
     </entry>
