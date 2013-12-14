@@ -8,7 +8,7 @@
 
         <br>
         <div id="search_results_header">
-          Resultados da pesquisa
+          <%= @users_found.length %> users have been found!<br>
           <div id="search_results">
             <ul class="tabs">
               <li class="current">Utilizadores</li>
@@ -17,7 +17,13 @@
 
             <div class="box visible">
 
-              <%= @users_found.name unless @users_found.nil?%>
+              <ul>
+                <% @users_found.each do |t| %>
+                    <li><%= link_to t.name, user_path(t) %></li>
+                <% end %>
+              </ul>
+
+
 
             </div>
             <div class="box">

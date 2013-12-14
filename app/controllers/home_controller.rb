@@ -8,9 +8,9 @@ class HomeController < ApplicationController
 
   def search
     if params[:query]
-      @users_found = User.find_by_name(params[:query])
+      @users_found = User.where("name LIKE (?)", "%#{params[:query]}%")
     else
-      @users_found = []
+      @users_found = nil
     end
   end
 
