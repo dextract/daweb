@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="761936dc-35ec-4a75-a2bf-df97953debe1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/news/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/news/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/companies/show.html.erb" afterPath="$PROJECT_DIR$/app/views/companies/show.html.erb" />
     </list>
     <ignored path="letsgetpro.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -14,7 +13,7 @@
     <file path="/home.css.scss" changelist="761936dc-35ec-4a75-a2bf-df97953debe1" time="1387062706712" ignored="false" />
     <file path="/home_controller.rb" changelist="761936dc-35ec-4a75-a2bf-df97953debe1" time="1387114441064" ignored="false" />
     <file path="/production.rb" changelist="761936dc-35ec-4a75-a2bf-df97953debe1" time="1386362374797" ignored="false" />
-    <file path="/show.html.erb" changelist="761936dc-35ec-4a75-a2bf-df97953debe1" time="1387106332140" ignored="false" />
+    <file path="/show.html.erb" changelist="761936dc-35ec-4a75-a2bf-df97953debe1" time="1387116343187" ignored="false" />
     <file path="/schema.rb" changelist="761936dc-35ec-4a75-a2bf-df97953debe1" time="1387050258287" ignored="false" />
     <file path="/20131212130302_create_users.rb" changelist="761936dc-35ec-4a75-a2bf-df97953debe1" time="1386870452452" ignored="false" />
     <file path="/new.html.erb" changelist="761936dc-35ec-4a75-a2bf-df97953debe1" time="1387070137553" ignored="false" />
@@ -160,10 +159,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_form.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="_form.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/news/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="10" selection-start="529" selection-end="529" vertical-scroll-proportion="0.4966443">
+            <state line="21" column="28" selection-start="553" selection-end="553" vertical-scroll-proportion="-9.875">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show.html.erb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/companies/show.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="52" selection-start="344" selection-end="344" vertical-scroll-proportion="0.31105992">
               <folding />
             </state>
           </provider>
@@ -205,24 +213,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/home_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="0" selection-start="369" selection-end="369" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="routes.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/routes.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="10" selection-start="766" selection-end="766" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindManager">
@@ -245,7 +235,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/controllers/news_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/_left_sidebar.html.erb" />
         <option value="$PROJECT_DIR$/db/migrate/20131215114159_create_contacts.rb" />
         <option value="$PROJECT_DIR$/app/models/contact.rb" />
@@ -261,6 +250,7 @@
         <option value="$PROJECT_DIR$/app/models/activity.rb" />
         <option value="$PROJECT_DIR$/app/views/users/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/news/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/companies/show.html.erb" />
       </list>
     </option>
   </component>
@@ -1115,20 +1105,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/_left_sidebar.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="75" selection-start="1543" selection-end="1561" vertical-scroll-proportion="0.7427293">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/contacts_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="20" selection-start="401" selection-end="401" vertical-scroll-proportion="0.41401273">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/tasks/sample_data.rake">
       <provider selected="true" editor-type-id="text-editor">
         <state line="54" column="49" selection-start="1910" selection-end="1910" vertical-scroll-proportion="0.477707">
@@ -1222,7 +1198,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/news/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="10" selection-start="529" selection-end="529" vertical-scroll-proportion="0.4966443">
+        <state line="21" column="28" selection-start="553" selection-end="553" vertical-scroll-proportion="-9.875">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/companies/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="20" selection-start="336" selection-end="336" vertical-scroll-proportion="0.40268457">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/companies/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="52" selection-start="344" selection-end="344" vertical-scroll-proportion="0.31105992">
           <folding />
         </state>
       </provider>

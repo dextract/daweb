@@ -7,7 +7,7 @@
     <div class="post-content">
       <table>
         <tr>
-          <td><%=image_tag @company.logo.url%></td><td></td>
+          <td><%=image_tag @company.logo.url(:medium)%></td><td></td>
         </tr>
         <tr>
           <th>Nome:</th><td><%= @company.name %></td>
