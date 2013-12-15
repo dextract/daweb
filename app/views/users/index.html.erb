@@ -22,11 +22,10 @@
               <% @users.each do |user| %>
                   <tr>
                     <td><%= image_tag user.avatar(:thumb) %></td>
-                    <td><%= user.name %></td>
+                    <td><%= link_to user.name, user %></td>
                     <td><%= user.age %></td>
                     <td><%= user.country %></td>
-                    <td><%= user.description %></td>
-                    <td><%= link_to 'More info', user %></td>
+                    <td><%= truncate(user.description, :length => 25) %></td>
                     <% if current_user.admin? %>
                         <td><%= link_to 'Edit', edit_user_path(user) %></td>
                         <% if !current_user?(user) %>

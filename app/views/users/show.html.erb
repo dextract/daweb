@@ -79,6 +79,47 @@
           </div>
         </div>
 
+        <div class="post-container">
+          <h3 class="post-title">Trabalhou em</h3>
+          <div class="post-content">
+            <table>
+              <tbody>
+              <% @user.companies.each do |company| %>
+                  <% if ex(company).include?(@user) %>
+                      <tr>
+                        <td><%= link_to content_tag(:span, company.name), company_path(company)%></td>
+                        <% if owners(company).include?(current_user) || current_user.admin?  %>
+                            <td> <td><%= link_to 'Remover colaborador', :action => 'destroy', :controller => 'memberships',
+                                                 :user_id => @user.id, :company => company %></td></td>
+                        <% end %>
+                      </tr>
+                  <% end %>
+              <% end %>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="post-container">
+          <h3 class="post-title">Outras actividades</h3>
+          <div class="post-content">
+            <table>
+              <tbody>
+              <% @user.companies.each do |company| %>
+                  <% if ex(company).include?(@user) %>
+                      <tr>
+                        <td><%= link_to content_tag(:span, company.name), company_path(company)%></td>
+                        <% if owners(company).include?(current_user) || current_user.admin?  %>
+                            <td> <td><%= link_to 'Remover colaborador', :action => 'destroy', :controller => 'memberships',
+                                                 :user_id => @user.id, :company => company %></td></td>
+                        <% end %>
+                      </tr>
+                  <% end %>
+              <% end %>
+              </tbody>
+            </table>
+          </div>
+        </div>
 
       </main><!-- .content -->
 <% end %>

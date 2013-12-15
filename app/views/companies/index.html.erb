@@ -28,7 +28,6 @@
               <% else %>
                   <td><%= link_to content_tag(:span, company.homepage), 'http://'+ company.homepage %></td>
               <% end %>
-              <td><%= company.homepage %></td>
               <td><%= truncate(company.description, :length => 34) %></td>
 
               <% if signed_in? && current_user.admin? %>
