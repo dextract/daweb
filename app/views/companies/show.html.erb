@@ -42,9 +42,7 @@
             <!--<tr>-->
             <th>Imagem</th>
             <th>Nome</th>
-            <th>Idade</th>
-            <th>País</th>
-            <th></th>
+            <th>Cargo</th>
             <th></th>
             <th></th>
             </tr>
@@ -54,13 +52,10 @@
             <% members(@company).each do |user| %>
                 <tr>
                   <td><%= image_tag user.avatar(:thumb) %></td>
-                  <td><%= user.name %></td>
-                  <td><%= user.age %></td>
-                  <td><%= user.country %></td>
+                  <td><%= link_to user.name, user %></td>
                   <% if owners(@company).include?(user) %>
                     <td>Presidente</td>
                   <% end %>
-                  <td><%= link_to 'More info', user %></td>
                   <% if signed_in? && (current_user.admin? || ( owners(@company).include?(current_user) && !owners(@company).include?(user) ))  %>
                       <td>
                         <%= link_to 'Remover colaborador', :action => 'destroy', :controller => 'memberships',
@@ -88,9 +83,7 @@
         <!--<tr>-->
         <th>Imagem</th>
         <th>Nome</th>
-        <th>Idade</th>
-        <th>País</th>
-        <th>Descrição</th>
+        <th>Cargo</th>
         <th></th>
         <th></th>
         <th></th>
@@ -100,9 +93,7 @@
         <% ex(@company).each do |user| %>
             <tr>
               <td><%= image_tag user.avatar(:thumb) %></td>
-              <td><%= user.name %></td>
-              <td><%= user.age %></td>
-              <td><%= user.country %></td>
+              <td><%= link_to user.name, user %></td>
               <td><%= user.description %></td>
               <td><%= link_to 'More info', user %></td>
               <% if signed_in? && (current_user.admin? || ( owners(@company).include?(current_user) && !owners(@company).include?(user) ))  %>
