@@ -21,6 +21,7 @@ class User < ActiveRecord::Base
   has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" },
                     :default_url => "/images/:style/missing.png", :storage => :dropbox,
                     :dropbox_credentials => Rails.root.join("config/dropbox_config.yml")
+  default_scope { order('name') }
 
   def User.new_remember_token
     SecureRandom.urlsafe_base64

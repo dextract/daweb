@@ -5,4 +5,5 @@ class Company < ActiveRecord::Base
   has_attached_file :logo, :styles => { :medium => "300x300>", :thumb => "100x100>" },
                     :default_url => "/images/:style/missing.png", :storage => :dropbox,
                     :dropbox_credentials => Rails.root.join("config/dropbox_config.yml")
+  default_scope { order('name') }
 end
