@@ -96,12 +96,6 @@
               <td><%= link_to user.name, user %></td>
               <td><%= user.description %></td>
               <td><%= link_to 'More info', user %></td>
-              <% if signed_in? && (current_user.admin? || ( owners(@company).include?(current_user) && !owners(@company).include?(user) ))  %>
-                      <td>
-                        <%= link_to 'Remover colaborador', :action => 'destroy', :controller => 'memberships',
-                                    :user_id => user.id, :company => @company %>
-                      </td>
-                  <% end %>
             </tr>
         <% end %>
         </tbody>

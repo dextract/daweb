@@ -1,138 +1,138 @@
 <% if signed_in? %>
-      <main class="content">
-        <% flash.each do |key, value| %>
-            <div class="alert alert-<%= key %>"><%= value %></div>
-        <% end %>
-        <div class="post-container">
-          <h3 class="post-title">CV de <%= @user.name %></h3>
-          <div class="post-content">
-            <table>
-              <tr>
-                <td><%=image_tag @user.avatar.url%></td><td></td>
-              </tr>
-              <tr>
-                <th>Nome:</th><td><%= @user.name %></td>
-              </tr>
-              <tr>
-                <th>Email:</th><td><%= @user.email %></td>
-              </tr>
-              <tr>
-                <th>Idade:</th><td><%= @user.age %></td>
-              </tr>
-              <tr>
-                <th>Pais:</th><td><%= @user.country %></td>
-              </tr>
-              <tr>
-                <th>Descrição:</th><td><%= @user.description %>y</td>
-              </tr>
-              <% if current_user?(@user) || current_user.admin? %>
-              <tr>
-                <th><%= link_to 'Modificar o perfil', edit_user_path(@user) %></th><td></td>
-              </tr>
-              <% end %>
-            </table>
-          </div>
+    <main class="content">
+      <% flash.each do |key, value| %>
+          <div class="alert alert-<%= key %>"><%= value %></div>
+      <% end %>
+      <div class="post-container">
+        <h3 class="post-title">CV de <%= @user.name %></h3>
+        <div class="post-content">
+          <table>
+            <tr>
+              <td><%=image_tag @user.avatar.url%></td><td></td>
+            </tr>
+            <tr>
+              <th>Nome:</th><td><%= @user.name %></td>
+            </tr>
+            <tr>
+              <th>Email:</th><td><%= @user.email %></td>
+            </tr>
+            <tr>
+              <th>Idade:</th><td><%= @user.age %></td>
+            </tr>
+            <tr>
+              <th>Pais:</th><td><%= @user.country %></td>
+            </tr>
+            <tr>
+              <th>Descrição:</th><td><%= @user.description %>y</td>
+            </tr>
+            <% if current_user?(@user) || current_user.admin? %>
+                <tr>
+                  <th><%= link_to 'Modificar o perfil', edit_user_path(@user) %></th><td></td>
+                </tr>
+            <% end %>
+          </table>
         </div>
+      </div>
 
 
-        <div class="post-container">
-          <h3 class="post-title">É presidente das empresas</h3>
-          <div class="post-content">
-            <table>
-              <tbody>
+      <div class="post-container">
+        <h3 class="post-title">É presidente das empresas</h3>
+        <div class="post-content">
+          <table>
+            <tbody>
 
-              <% @user.companies.each do |company| %>
-                  <tr>
-                    <td><%= link_to content_tag(:span, company.name), company_path(company)%></td>
-                    <% if owners(company).include?(current_user) || current_user.admin?  %>
-                        <td><%= link_to 'Remover presidência', :action => 'remove_pres', :controller => 'memberships',
-                                        :user_id => @user.id, :company => company %></td>
-                  </tr>
+            <% @user.companies.each do |company| %>
+                <tr>
+                  <td><%= link_to content_tag(:span, company.name), company_path(company)%></td>
+                  <% if owners(company).include?(current_user) || current_user.admin?  %>
+                      <td><%= link_to 'Remover presidência', :action => 'remove_pres', :controller => 'memberships',
+                                      :user_id => @user.id, :company => company %></td>
+                      </tr>
                   <% end %>
-              <% end %>
-              <% if current_user?(@user) || current_user.admin? %>
-                  <tr>
-                    <th><%= link_to 'Adicionar presidência', edit_user_path(@user) %></th><td></td>
-                  </tr>
-              <% end %>
-              </tbody>
-            </table>
-          </div>
+            <% end %>
+            <% if current_user?(@user) || current_user.admin? %>
+                <tr>
+                  <th><%= link_to 'Adicionar presidência', edit_user_path(@user) %></th><td></td>
+                </tr>
+            <% end %>
+            </tbody>
+          </table>
         </div>
+      </div>
 
 
-        <div class="post-container">
-          <h3 class="post-title">É colaborador nas empresas</h3>
-          <div class="post-content">
-            <table>
-              <tbody>
-              <% @user.companies.each do |company| %>
-                  <% if members(company).include?(@user) %>
-                  <tr>
-                    <td><%= link_to content_tag(:span, company.name), company_path(company)%></td>
-                    <% if owners(company).include?(current_user) || current_user.admin?  %>
-                    <td> <td><%= link_to 'Remover colaborador', :action => 'destroy', :controller => 'memberships',
-                                         :user_id => @user.id, :company => company %></td></td>
-                    <% end %>
-                  </tr>
+      <div class="post-container">
+        <h3 class="post-title">É colaborador nas empresas</h3>
+        <div class="post-content">
+          <table>
+            <tbody>
+            <% @user.companies.each do |company| %>
+                <% if members(company).include?(@user) %>
+                    <tr>
+                      <td><%= link_to content_tag(:span, company.name), company_path(company)%></td>
+                      <% if owners(company).include?(current_user) || current_user.admin?  %>
+                          <td> <td><%= link_to 'Remover colaborador', :action => 'destroy', :controller => 'memberships',
+                                               :user_id => @user.id, :company => company %></td></td>
+                      <% end %>
+                    </tr>
                 <% end %>
-              <% end %>
-              <% if current_user?(@user) || current_user.admin? %>
-                  <tr>
-                    <th><%= link_to 'Adicionar cargo', edit_user_path(@user) %></th><td></td>
-                  </tr>
-              <% end %>
-              </tbody>
-            </table>
-          </div>
+            <% end %>
+            <% if current_user?(@user) || current_user.admin? %>
+                <tr>
+                  <th><%= link_to 'Adicionar cargo', edit_user_path(@user) %></th><td></td>
+                </tr>
+            <% end %>
+            </tbody>
+          </table>
         </div>
+      </div>
 
-        <div class="post-container">
-          <h3 class="post-title">Trabalhou em</h3>
-          <div class="post-content">
-            <table>
-              <tbody>
-              <% @user.companies.each do |company| %>
-                  <% if ex(company).include?(@user) %>
-                      <tr>
-                        <td><%= link_to content_tag(:span, company.name), company_path(company)%></td>
-                        <% if owners(company).include?(current_user) || current_user.admin?  %>
-                            <td> <td><%= link_to 'Remover colaborador', :action => 'destroy', :controller => 'memberships',
-                                                 :user_id => @user.id, :company => company %></td></td>
-                        <% end %>
-                      </tr>
-                  <% end %>
-              <% end %>
-              </tbody>
-            </table>
-          </div>
+      <div class="post-container">
+        <h3 class="post-title">Trabalhou em</h3>
+        <div class="post-content">
+          <table>
+            <tbody>
+            <% @user.companies.each do |company| %>
+                <% if ex(company).include?(@user) %>
+                    <tr>
+                      <td><%= link_to content_tag(:span, company.name), company_path(company)%></td>
+                      <% if owners(company).include?(current_user) || current_user.admin?  %>
+                          <td> <td><%= link_to 'Remover colaborador', :action => 'destroy', :controller => 'memberships',
+                                               :user_id => @user.id, :company => company %></td></td>
+                      <% end %>
+                    </tr>
+                <% end %>
+            <% end %>
+            </tbody>
+          </table>
         </div>
+      </div>
 
-        <div class="post-container">
-          <h3 class="post-title">Outras actividades</h3>
-          <div class="post-content">
-            <table>
-              <tbody>
-              <% @user.activities do |activity| %>
-                  <% if ex(activity).include?(@user) %>
-                      <tr>
-                        <td><%= link_to content_tag(:span, activity.name), activity_path(activity)%></td>
-                        <% if owners(activity).include?(current_user) || current_user.admin?  %>
-                            <td> <td><%= link_to 'Remover actividade', :action => 'destroy', :controller => 'activities',
-                                                 :user_id => @user.id, :activity => activity %></td></td>
-                        <% end %>
-                      </tr>
-                  <% end %>
-              <% end %>
-              <% if current_user?(@user) || current_user.admin? %>
-                  <tr>
-                    <th><%= link_to 'Adicionar actividade', edit_user_path(@user) %></th><td></td>
-                  </tr>
-              <% end %>
-              </tbody>
-            </table>
-          </div>
+      <div class="post-container">
+        <h3 class="post-title">Outras actividades</h3>
+        <div class="post-content">
+          <table>
+            <tbody>
+            <% @user.activities do |activity| %>
+                <% if ex(activity).include?(@user) %>
+                    <tr>
+                      <td><%= link_to content_tag(:span, activity.name), activity_path(activity)%></td>
+                      <% if owners(activity).include?(current_user) || current_user.admin?  %>
+                          <td> <td><%= link_to 'Remover actividade', :action => 'destroy', :controller => 'activities',
+                                               :user_id => @user.id, :activity => activity %></td></td>
+                      <% end %>
+                    </tr>
+                <% end %>
+            <% end %>
+            <% if current_user?(@user) || current_user.admin? %>
+                <tr>
+                  <th><%= link_to 'Adicionar actividade', edit_user_path(@user) %></th><td></td>
+                </tr>
+            <% end %>
+            </tbody>
+          </table>
         </div>
+      </div>
 
-      </main><!-- .content -->
+    </main><!-- .content -->
 <% end %>
