@@ -44,7 +44,7 @@
         <h2>Actividade Recente</h2>
             <% articles.each do |na| %>
                 <p><%= link_to content_tag(:span, na.title), na %>
-                by <%= link_to content_tag(:sapn, na.user.name), na.user  %></p>
+                by <%= link_to content_tag(:span, na.user.name), na.user  %></p>
             <% end %>
       </div>
   <% end %>

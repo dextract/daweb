@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="761936dc-35ec-4a75-a2bf-df97953debe1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/news/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/news/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/contacts.html.erb" afterPath="$PROJECT_DIR$/app/views/home/contacts.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/contacts_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/contacts_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/_left_sidebar.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/_left_sidebar.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/development.sqlite3" afterPath="$PROJECT_DIR$/db/development.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/home_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/home_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/news/index.html.erb" afterPath="$PROJECT_DIR$/app/views/news/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/news_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/news_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/show.html.erb" afterPath="$PROJECT_DIR$/app/views/users/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/user.rb" afterPath="$PROJECT_DIR$/app/models/user.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/users_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/users_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="letsgetpro.iws" />
@@ -82,7 +74,7 @@
     <file path="/20131213052835_add_index_to_users_email.rb" changelist="761936dc-35ec-4a75-a2bf-df97953debe1" time="1386936474398" ignored="false" />
     <file path="/_header.html.erb" changelist="761936dc-35ec-4a75-a2bf-df97953debe1" time="1386983124800" ignored="false" />
     <file path="/application.html.erb" changelist="761936dc-35ec-4a75-a2bf-df97953debe1" time="1386933356072" ignored="false" />
-    <file path="/_left_sidebar.html.erb" changelist="761936dc-35ec-4a75-a2bf-df97953debe1" time="1387107450322" ignored="false" />
+    <file path="/_left_sidebar.html.erb" changelist="761936dc-35ec-4a75-a2bf-df97953debe1" time="1387137940946" ignored="false" />
     <file path="/.gitignore" changelist="761936dc-35ec-4a75-a2bf-df97953debe1" time="1386938605500" ignored="false" />
     <file path="/sessions_controller.rb" changelist="761936dc-35ec-4a75-a2bf-df97953debe1" time="1386941313236" ignored="false" />
     <file path="/_form.html.erb" changelist="761936dc-35ec-4a75-a2bf-df97953debe1" time="1387136020955" ignored="false" />
@@ -142,10 +134,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="contacts.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="contacts.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/home/contacts.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="39" selection-start="1370" selection-end="1370" vertical-scroll-proportion="0.6452174">
+            <state line="35" column="39" selection-start="1370" selection-end="1370" vertical-scroll-proportion="-15.458333">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="news_helper.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/helpers/news_helper.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="19" selection-start="80" selection-end="80" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_left_sidebar.html.erb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/layouts/_left_sidebar.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="34" column="20" selection-start="1469" selection-end="1469" vertical-scroll-proportion="0.42608696">
               <folding />
             </state>
           </provider>
@@ -218,8 +228,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/helpers/home_helper.rb" />
-        <option value="$PROJECT_DIR$/db/migrate/20131215122812_add_pending_to_contacts.rb" />
         <option value="$PROJECT_DIR$/lib/tasks/sample_data.rake" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/views/home/contact.html.erb" />
@@ -234,6 +242,8 @@
         <option value="$PROJECT_DIR$/app/views/users/show.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/contacts_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/home/contacts.html.erb" />
+        <option value="$PROJECT_DIR$/app/helpers/news_helper.rb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/_left_sidebar.html.erb" />
       </list>
     </option>
   </component>
@@ -1004,7 +1014,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="2" width="1368" height="769" extended-state="1" />
+    <frame x="-1" y="2" width="1368" height="769" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1088,20 +1098,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/models/contact.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="21" selection-start="56" selection-end="56" vertical-scroll-proportion="0.025041737">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="38" selection-start="582" selection-end="582" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/helpers/home_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="0" selection-start="19" selection-end="19" vertical-scroll-proportion="0.050083473">
@@ -1195,7 +1191,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/contacts.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="39" selection-start="1370" selection-end="1370" vertical-scroll-proportion="0.6452174">
+        <state line="35" column="39" selection-start="1370" selection-end="1370" vertical-scroll-proportion="-15.458333">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/helpers/news_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="19" selection-start="80" selection-end="80" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/_left_sidebar.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="20" selection-start="1469" selection-end="1469" vertical-scroll-proportion="0.42608696">
           <folding />
         </state>
       </provider>
