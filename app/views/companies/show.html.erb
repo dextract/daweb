@@ -13,7 +13,11 @@
           <th>Nome:</th><td><%= @company.name %></td>
         </tr>
         <tr>
-          <th>Email:</th><td><%= @company.homepage %></td>
+          <% if @company.homepage.start_with?('http://') %>
+              <th>Homepage:</th><td><%= link_to content_tag(:span, @company.homepage), @company.homepage %></td>
+          <% else %>
+              <th>Homepage:</th><td><%= link_to content_tag(:span, @company.homepage), 'http://'+ @company.homepage %></td>
+          <% end %>
         </tr>
         <tr>
           <th>Descrição:</th><td><%= @company.description %>y</td>
@@ -40,7 +44,6 @@
             <th>Nome</th>
             <th>Idade</th>
             <th>País</th>
-            <th>Descrição</th>
             <th></th>
             <th></th>
             <th></th>
@@ -54,7 +57,6 @@
                   <td><%= user.name %></td>
                   <td><%= user.age %></td>
                   <td><%= user.country %></td>
-                  <td><%= user.description %></td>
                   <% if owners(@company).include?(user) %>
                     <td>Presidente</td>
                   <% end %>

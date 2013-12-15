@@ -22,10 +22,14 @@
         <% @companies.each do |company| %>
             <tr>
               <td><%= image_tag company.logo(:thumb) %></td>
-              <td><%= company.name %></td>
+              <td><%= link_to company.name, company %></td>
+              <% if company.homepage.start_with?('http://') %>
+                  <td><%= link_to content_tag(:span, company.homepage), company.homepage %></td>
+              <% else %>
+                  <td><%= link_to content_tag(:span, company.homepage), 'http://'+ company.homepage %></td>
+              <% end %>
               <td><%= company.homepage %></td>
-              <td><%= company.description %></td>
-              <td><%= link_to 'More info', company %></td>
+              <td><%= truncate(company.description, :length => 34) %></td>
 
               <% if signed_in? && current_user.admin? %>
                <td><%= link_to 'Edit', edit_company_path(company) %></td>
