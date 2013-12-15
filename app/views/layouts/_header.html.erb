@@ -1,5 +1,30 @@
 <header class="header">
-
+  <%  cur_page = request.env['PATH_INFO']
+      if cur_page == '/'
+        home = true;
+      end
+      if cur_page == '/users'
+        users = true;
+      end
+      if cur_page.include? '/users/'
+        user_cp = true;
+      end
+      if cur_page == '/companies'
+        companies = true;
+      end
+      if cur_page.include? '/companies/'
+        company_cp = true;
+      end
+      if cur_page == '/home/contacts'
+        contacts = true;
+      end
+      if cur_page == '/home/search'
+        search = true;
+      end
+      if cur_page == '/signin'
+        signin = true;
+      end
+  %>
   <div class="logo_area">
     <%= link_to image_tag('logo.png', :border=>0), root_path %>
   </div>
@@ -8,25 +33,33 @@
     <nav id="navigation_mobile">
       <div class="no_logo"><%= link_to 'Let’s get pro!', root_path %> </div>
       <ul class="vmenu">
-        <li class="home"><%= link_to "Home", root_path, :class => "menu_selected" %></li>
+        <li class="home"><%= link_to "Home", root_path, :class => home ? "menu_selected" : "menu_hidden" %></li>
         <% if signed_in? %>
-            <li class="utilizador parent"><a href="#"><span class="menu_hidden">Utilizador</span></a>
-              <ul class="dropdown">
-                <li><%= link_to content_tag(:span, "Painel do utilizador"), current_user %></li>
-                <li><%= link_to content_tag(:span, "Lista de utilizadores"), users_path %></li>
-              </ul>
+            <% if users || user_cp %>
+                <li class="utilizador parent"><a href="#"><span class="menu_selected">Utilizador</span></a>
+            <% else %>
+                <li class="utilizador parent"><a href="#"><span class="menu_hidden">Utilizador</span></a>
+            <% end %>
+            <ul class="dropdown">
+              <li><%= link_to content_tag(:span, "Painel do utilizador", :class => user_cp ? "drop_selected" : "drop_hidden"), current_user %></li>
+              <li><%= link_to content_tag(:span, "Lista de utilizadores", :class => users ? "drop_selected" : "drop_hidden"), users_path %></li>
+            </ul>
             </li>
-            <li class="empresas parent"><a href="#"><span class="menu_hidden">Empresa</span></a>
-              <ul class="dropdown">
-                <li><%= link_to content_tag(:span, "Nova empresa"), new_company_path%></li>
-                <li><%= link_to content_tag(:span, "Lista de empresas"), companies_path%></li>
-              </ul>
+            <% if companies || company_cp %>
+                <li class="empresas parent"><a href="#"><span class="menu_selected">Empresa</span></a>
+            <% else %>
+                <li class="empresas parent"><a href="#"><span class="menu_hidden">Empresa</span></a>
+            <% end %>
+            <ul class="dropdown">
+              <li><%= link_to content_tag(:span, "Nova empresa", :class => company_cp ? "drop_selected" : "drop_hidden"), new_company_path%></li>
+              <li><%= link_to content_tag(:span, "Lista de empresas",  :class => companies ? "drop_selected" : "drop_hidden"), companies_path%></li>
+            </ul>
             </li>
-            <li class="contactos"><%= link_to "Contactos", home_contacts_path %></li>
+            <li class="contactos"><%= link_to "Contactos",home_contacts_path, {:class => contacts ? "menu_selected" : "menu_hidden"} %></li>
         <% else %>
-            <li><%= link_to content_tag(:span, "Login"), signin_path %></li>
+            <li><%= link_to content_tag(:span, "Login", :class => signin ? "menu_selected" : "menu_hidden"), signin_path %></li>
         <% end %>
-        <li class="pesquisa_menu"><%= link_to "Pesquisa", home_search_path %></li>
+        <li class="pesquisa_menu"><%= link_to "Pesquisa", home_search_path, {:class => search ? "menu_selected" : "menu_hidden"} %></li>
       </ul>
     </nav>
   </div>
