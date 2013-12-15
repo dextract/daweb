@@ -42,10 +42,10 @@
   <% if signed_in? %>
       <div class="recent_activity">
         <h2>Actividade Recente</h2>
-        <p><a href="#">Dummy 1</a></p>
-        <p><a href="#">Dummy 2</a></p>
-        <p><a href="#">Empresa 1</a></p>
-        <p><a href="user_cp.html">Painel de Utilizador</a></p>
+            <% articles.each do |na| %>
+                <p><%= link_to content_tag(:span, na.title), na %>
+                by <%= link_to content_tag(:sapn, na.user.name), na.user  %></p>
+            <% end %>
       </div>
   <% end %>
 </aside><!-- .left-sidebar -->
