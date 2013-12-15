@@ -42,9 +42,9 @@
               <tbody>
 
               <% @user.companies.each do |company| %>
-                <% if owners(company).include?(@user) %>
                   <tr>
                     <td><%= link_to content_tag(:span, company.name), company_path(company)%></td>
+                    <% if owners(company).include?(current_user) || current_user.admin?  %>
                         <td><%= link_to 'Remover presidência', :action => 'remove_pres', :controller => 'memberships',
                                         :user_id => @user.id, :company => company %></td>
                   </tr>
@@ -67,67 +67,12 @@
                   <% if members(company).include?(@user) %>
                   <tr>
                     <td><%= link_to content_tag(:span, company.name), company_path(company)%></td>
-                    <% if owners(company).include?(@user) %>
+                    <% if owners(company).include?(current_user) || current_user.admin?  %>
                     <td> <td><%= link_to 'Remover colaborador', :action => 'destroy', :controller => 'memberships',
                                          :user_id => @user.id, :company => company %></td></td>
                     <% end %>
                   </tr>
                 <% end %>
-              <% end %>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-
-
-
-        <div class="post-container">
-          <h3 class="post-title">Pedidos de contacto pendentes</h3>
-          <div class="post-content">
-            <table>
-              <% if current_user.contacts.where(pending: true).length>0%>
-                  <thead>
-                  <!--<tr>-->
-                  <th>Imagem</th>
-                  <th>Nome</th>
-                  <th>Idade</th>
-                  <th>País</th>
-                  <th>Descrição</th>
-                  <th></th>
-                  <th></th>
-                  <th></th>
-                  </tr>
-                  </thead>
-                  <tbody>
-              <% else %>
-                  Não há contactos pendentes
-              <% end %>
-              <% current_user.contacts.where(pending: true).each do |contact| %>
-                  <tr>
-                    <td><%= image_tag User.find(contact.contactee_id).avatar(:thumb) %></td>
-                    <td><%= link_to User.find(contact.contactee_id).name, User.find(contact.contactee_id)  %></td>
-                    <td><%= User.find(contact.contactee_id).age %></td>
-                    <td><%= User.find(contact.contactee_id).country %></td>
-                    <td><%= User.find(contact.contactee_id).description %></td>
-                    <% if User.find(contact.contact_id).id != current_user.id %>
-                        <% if signed_in? && current_user.admin?  %>
-                            <td>
-                              <%= link_to 'Aceitar', :action => 'accept_contact', :controller => 'contacts',
-                                          :contact_id => current_user.id, :contactee_id => User.find(contact.contactee_id).id %>
-                            </td>
-                            <td>
-                              <%= link_to 'Rejeitar', :action => 'reject_contact', :controller => 'contacts',
-                                          :contact_id => current_user.id, :contactee_id => User.find(contact.contactee_id).id %>
-                            </td>
-                        <% end %>
-                    <% else %>
-                        <td>
-                          <%= link_to 'Cancelar', :action => 'reject_contact', :controller => 'contacts',
-                                      :contact_id => current_user.id, :contactee_id => User.find(contact.contactee_id).id %>
-                        </td>
-                    <% end %>
-                  </tr>
               <% end %>
               </tbody>
             </table>

@@ -16,7 +16,7 @@ class HomeController < ApplicationController
     if params[:commit]
       @user = User.find(params[:user][:id])
       current_user.contact!(@user,true)
-      redirect_to home_contact_path, notice: "Contacto enviado."
+      redirect_to home_contacts_path, notice: "Pedido de contacto enviado."
     end
   end
 

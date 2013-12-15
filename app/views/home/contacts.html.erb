@@ -8,8 +8,10 @@
         <div class="post-container">
           <h3 class="post-title">Conctactos</h3>
           <div class="post-content">
+            <% if current_user.reverse_contacts.where(pending: false).length>0 ||
+                    current_user.contacts.where(pending: false).length>0 %>
             <table>
-              <% if current_user.contacts.where(pending: false).length>0%>
+
               <thead>
               <!--<tr>-->
               <th>Imagem</th>
@@ -23,9 +25,25 @@
               </tr>
               </thead>
               <tbody>
-                <% else %>
-                    Não existe contactos
-                <% end %>
+
+              <% current_user.reverse_contacts.where(pending: false).each do |contact| %>
+                  <tr>
+                    <td><%= image_tag User.find(contact.contact_id).avatar(:thumb) %></td>
+                    <td><%= link_to User.find(contact.contact_id).name, User.find(contact.contact_id)  %></td>
+                    <td><%= User.find(contact.contact_id).age %></td>
+                    <td><%= User.find(contact.contact_id).country %></td>
+                    <td><%= User.find(contact.contact_id).description %></td>
+                    <% if signed_in? || current_user.admin?  %>
+                        <td>
+                          <%= link_to 'Remover contacto', :action => 'destroy', :controller => 'contacts',
+                                      :contact_id => contact.contact_id, :contactee_id => current_user.id %>
+                        </td>
+                    <% end %>
+                  </tr>
+              <% end %>
+
+
+
               <% current_user.contacts.where(pending: false).each do |contact| %>
                   <tr>
                     <td><%= image_tag User.find(contact.contactee_id).avatar(:thumb) %></td>
@@ -33,23 +51,30 @@
                     <td><%= User.find(contact.contactee_id).age %></td>
                     <td><%= User.find(contact.contactee_id).country %></td>
                     <td><%= User.find(contact.contactee_id).description %></td>
-                    <% if signed_in? && current_user.admin?  %>
+                    <% if signed_in? || current_user.admin?  %>
                         <td>
                           <%= link_to 'Remover contacto', :action => 'destroy', :controller => 'contacts',
-                                      :contact_id => current_user.id, :contactee_id => User.find(contact.contactee_id).id %>
+                                      :contact_id => current_user.id, :contactee_id => contact.contactee_id %>
                         </td>
                     <% end %>
                   </tr>
               <% end %>
+
+
               </tbody>
+
                 </table>
+                <% else %>
+                    Não existe contactos.
+                <% end %>
           </div>
         </div>
         <div class="post-container">
           <h3 class="post-title">Pedidos de contacto pendentes</h3>
           <div class="post-content">
+            <% if Contact.where(pending: true, contactee_id: current_user).length>0 %>
             <table>
-              <% if current_user.contacts.where(pending: true).length>0%>
+
               <thead>
               <!--<tr>-->
               <th>Imagem</th>
@@ -63,37 +88,32 @@
               </tr>
               </thead>
               <tbody>
-                <% else %>
-              Não há contactos pendentes
-                  <% end %>
-              <% current_user.contacts.where(pending: true).each do |contact| %>
+
+              <% Contact.where(pending: true, contactee_id: current_user).each do |contact| %>
                   <tr>
-                    <td><%= image_tag User.find(contact.contactee_id).avatar(:thumb) %></td>
-                    <td><%= link_to User.find(contact.contactee_id).name, User.find(contact.contactee_id)  %></td>
-                    <td><%= User.find(contact.contactee_id).age %></td>
-                    <td><%= User.find(contact.contactee_id).country %></td>
-                    <td><%= User.find(contact.contactee_id).description %></td>
-                    <% if User.find(contact.contact_id).id != current_user.id %>
-                    <% if signed_in? && current_user.admin?  %>
+                    <td><%= image_tag User.find(contact.contact_id).avatar(:thumb) %></td>
+                    <td><%= link_to User.find(contact.contact_id).name, User.find(contact.contact_id)  %></td>
+                    <td><%= User.find(contact.contact_id).age %></td>
+                    <td><%= User.find(contact.contact_id).country %></td>
+                    <td><%= User.find(contact.contact_id).description %></td>
+                    <% if signed_in? || current_user.admin?  %>
                         <td>
                           <%= link_to 'Aceitar', :action => 'accept_contact', :controller => 'contacts',
-                                      :contact_id => current_user.id, :contactee_id => User.find(contact.contactee_id).id %>
+                                      :contact_id => contact.contact_id, :contactee_id => current_user.id %>
                         </td>
                         <td>
                           <%= link_to 'Rejeitar', :action => 'reject_contact', :controller => 'contacts',
-                                      :contact_id => current_user.id, :contactee_id => User.find(contact.contactee_id).id %>
-                        </td>
-                    <% end %>
-                     <% else %>
-                        <td>
-                        <%= link_to 'Cancelar', :action => 'reject_contact', :controller => 'contacts',
-                                    :contact_id => current_user.id, :contactee_id => User.find(contact.contactee_id).id %>
+                                      :contact_id => contact.contact_id, :contactee_id => current_user.id %>
                         </td>
                     <% end %>
                   </tr>
               <% end %>
               </tbody>
+
             </table>
+             <% else %>
+                Não existe pedidos pendentes
+              <% end %>
           </div>
         </div>
         <div class="post-form">

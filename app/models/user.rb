@@ -2,6 +2,7 @@ class User < ActiveRecord::Base
   has_many :news
   has_many :companies, through: :memberships
   has_many :memberships, foreign_key: "user_id", dependent: :destroy
+
   has_many :contacts, foreign_key: "contact_id", dependent: :destroy
   has_many :contactee_users, through: :contacts, source: :contactee
   has_many :reverse_contacts, foreign_key: "contactee_id",
