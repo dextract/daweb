@@ -9,6 +9,7 @@ class User < ActiveRecord::Base
            class_name:  "Contact",
            dependent:   :destroy
   has_many :contactees, through: :reverse_contacts, source: :contact
+  has_many :activities, dependent: :destroy
 
   before_save { self.email = email.downcase }
   validates :name, presence: true, length: { maximum: 50 }

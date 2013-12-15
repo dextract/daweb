@@ -49,8 +49,11 @@
                                         :user_id => @user.id, :company => company %></td>
                   </tr>
                   <% end %>
-
-
+              <% end %>
+              <% if current_user?(@user) || current_user.admin? %>
+                  <tr>
+                    <th><%= link_to 'Adicionar presidência', edit_user_path(@user) %></th><td></td>
+                  </tr>
               <% end %>
               </tbody>
             </table>
@@ -73,6 +76,11 @@
                     <% end %>
                   </tr>
                 <% end %>
+              <% end %>
+              <% if current_user?(@user) || current_user.admin? %>
+                  <tr>
+                    <th><%= link_to 'Adicionar cargo', edit_user_path(@user) %></th><td></td>
+                  </tr>
               <% end %>
               </tbody>
             </table>
@@ -105,16 +113,21 @@
           <div class="post-content">
             <table>
               <tbody>
-              <% @user.companies.each do |company| %>
-                  <% if ex(company).include?(@user) %>
+              <% @user.activities do |activity| %>
+                  <% if ex(activity).include?(@user) %>
                       <tr>
-                        <td><%= link_to content_tag(:span, company.name), company_path(company)%></td>
-                        <% if owners(company).include?(current_user) || current_user.admin?  %>
-                            <td> <td><%= link_to 'Remover colaborador', :action => 'destroy', :controller => 'memberships',
-                                                 :user_id => @user.id, :company => company %></td></td>
+                        <td><%= link_to content_tag(:span, activity.name), activity_path(activity)%></td>
+                        <% if owners(activity).include?(current_user) || current_user.admin?  %>
+                            <td> <td><%= link_to 'Remover actividade', :action => 'destroy', :controller => 'activities',
+                                                 :user_id => @user.id, :activity => activity %></td></td>
                         <% end %>
                       </tr>
                   <% end %>
+              <% end %>
+              <% if current_user?(@user) || current_user.admin? %>
+                  <tr>
+                    <th><%= link_to 'Adicionar actividade', edit_user_path(@user) %></th><td></td>
+                  </tr>
               <% end %>
               </tbody>
             </table>
