@@ -72,21 +72,11 @@
         <div class="post-container">
           <h3 class="post-title">Pedidos de contacto pendentes</h3>
           <div class="post-content">
-            <% if Contact.where(pending: true, contactee_id: current_user).length>0 %>
+            <% if Contact.where(pending: true, contactee_id: current_user).length>0 ||
+                  Contact.where(pending: true, contact_id: current_user).length>0 %>
             <table>
-
-              <thead>
-              <!--<tr>-->
-              <th>Imagem</th>
-              <th>Nome</th>
-              <th>Idade</th>
-              <th>País</th>
-              <th>Descrição</th>
-              <th></th>
-              <th></th>
-              <th></th>
-              </tr>
-              </thead>
+              <% if Contact.where(pending: true, contactee_id: current_user).length>0 %>
+              <h3 class="post-title">Recebidos</h3>
               <tbody>
 
               <% Contact.where(pending: true, contactee_id: current_user).each do |contact| %>
@@ -107,8 +97,40 @@
                         </td>
                     <% end %>
                   </tr>
-              <% end %>
+              <%end %>
+
               </tbody>
+              <% end %>
+            </table>
+
+
+                    <hr>
+                <% if Contact.where(pending: true, contact_id: current_user).length>0 %>
+                <h3 class="post-title">Enviados</h3>
+
+                <table>
+
+                  <tbody>
+
+              <% Contact.where(pending: true, contact_id: current_user).each do |contact| %>
+                  <tr>
+                    <td><%= image_tag User.find(contact.contactee_id).avatar(:thumb) %></td>
+                    <td><%= link_to User.find(contact.contactee_id).name, User.find(contact.contactee_id)  %></td>
+                    <td><%= User.find(contact.contactee_id).age %></td>
+                    <td><%= User.find(contact.contactee_id).country %></td>
+                    <td><%= User.find(contact.contactee_id).description %></td>
+                    <% if signed_in? || current_user.admin?  %>
+
+                        <td>
+                          <%= link_to 'Cancelar', :action => 'reject_contact', :controller => 'contacts',
+                                      :contact_id => current_user.id , :contactee_id => contact.contactee_id %>
+                        </td>
+                    <% end %>
+                  </tr>
+              <% end %>
+
+              </tbody>
+                <% end %>
 
             </table>
              <% else %>
