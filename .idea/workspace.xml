@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="761936dc-35ec-4a75-a2bf-df97953debe1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/development.sqlite3" afterPath="$PROJECT_DIR$/db/development.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/memberships_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/memberships_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/companies/show.html.erb" afterPath="$PROJECT_DIR$/app/views/companies/show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/show.html.erb" afterPath="$PROJECT_DIR$/app/views/users/show.html.erb" />
     </list>
     <ignored path="letsgetpro.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -15,7 +15,7 @@
     <file path="/home.css.scss" changelist="761936dc-35ec-4a75-a2bf-df97953debe1" time="1387062706712" ignored="false" />
     <file path="/home_controller.rb" changelist="761936dc-35ec-4a75-a2bf-df97953debe1" time="1387135783649" ignored="false" />
     <file path="/production.rb" changelist="761936dc-35ec-4a75-a2bf-df97953debe1" time="1386362374797" ignored="false" />
-    <file path="/show.html.erb" changelist="761936dc-35ec-4a75-a2bf-df97953debe1" time="1387146939352" ignored="false" />
+    <file path="/show.html.erb" changelist="761936dc-35ec-4a75-a2bf-df97953debe1" time="1387148071651" ignored="false" />
     <file path="/schema.rb" changelist="761936dc-35ec-4a75-a2bf-df97953debe1" time="1387050258287" ignored="false" />
     <file path="/20131212130302_create_users.rb" changelist="761936dc-35ec-4a75-a2bf-df97953debe1" time="1386870452452" ignored="false" />
     <file path="/new.html.erb" changelist="761936dc-35ec-4a75-a2bf-df97953debe1" time="1387070137553" ignored="false" />
@@ -143,10 +143,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="show.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/users/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="26" selection-start="1595" selection-end="1632" vertical-scroll-proportion="-12.708333">
+            <state line="47" column="16" selection-start="1546" selection-end="1546" vertical-scroll-proportion="0.2347826">
               <folding />
             </state>
           </provider>
@@ -155,7 +155,7 @@
       <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/companies/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="29" selection-start="444" selection-end="444" vertical-scroll-proportion="-6.4583335">
+            <state line="15" column="29" selection-start="408" selection-end="408" vertical-scroll-proportion="-6.4583335">
               <folding />
             </state>
           </provider>
@@ -164,7 +164,7 @@
       <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/companies/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="31" selection-start="1740" selection-end="1747" vertical-scroll-proportion="-8.416667">
+            <state line="57" column="28" selection-start="1928" selection-end="2036" vertical-scroll-proportion="-10.916667">
               <folding />
             </state>
           </provider>
@@ -206,10 +206,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="memberships_controller.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="memberships_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/memberships_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="47" selection-start="358" selection-end="358" vertical-scroll-proportion="0.17529215">
+            <state line="14" column="59" selection-start="670" selection-end="670" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -253,15 +253,15 @@
         <option value="$PROJECT_DIR$/app/views/news/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/news/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/users_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/users/show.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/contacts_controller.rb" />
         <option value="$PROJECT_DIR$/app/helpers/news_helper.rb" />
         <option value="$PROJECT_DIR$/app/controllers/news_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/home/contacts.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/_left_sidebar.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/_header.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/companies/show.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/memberships_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/companies/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/users/show.html.erb" />
       </list>
     </option>
   </component>
@@ -1167,7 +1167,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/companies/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="29" selection-start="444" selection-end="444" vertical-scroll-proportion="-6.4583335">
+        <state line="15" column="29" selection-start="408" selection-end="408" vertical-scroll-proportion="-6.4583335">
           <folding />
         </state>
       </provider>
@@ -1175,13 +1175,6 @@
     <entry file="file://$PROJECT_DIR$/db/schema.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="28" selection-start="988" selection-end="988" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/users/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="26" selection-start="1595" selection-end="1632" vertical-scroll-proportion="-12.708333">
           <folding />
         </state>
       </provider>
@@ -1207,13 +1200,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/companies/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="31" selection-start="1740" selection-end="1747" vertical-scroll-proportion="-8.416667">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/helpers/companies_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="60" selection-start="154" selection-end="199" vertical-scroll-proportion="0.0">
@@ -1223,7 +1209,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/memberships_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="47" selection-start="358" selection-end="358" vertical-scroll-proportion="0.17529215">
+        <state line="14" column="59" selection-start="670" selection-end="670" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/companies/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="28" selection-start="1928" selection-end="2036" vertical-scroll-proportion="-10.916667">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/users/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="16" selection-start="1546" selection-end="1546" vertical-scroll-proportion="0.2347826">
           <folding />
         </state>
       </provider>
