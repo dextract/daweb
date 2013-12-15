@@ -11,7 +11,12 @@
         <div class="post-content"><p><%= news.content %></p></div>
         <div class="post-footer">
 
+          <%= link_to "Ler mas/Partilhar", news, :style=>'float:left;' %>
+          <span style="float:left">&nbsp;</span>
           <% if signed_in? && current_user.admin? %>
+          <%= link_to "\t\tModificar", edit_news_path(news), :style=>'float:left;' %>
+          <span style="float:left">&nbsp;</span>
+
               <%= link_to "Apagar a notícia", news, method: :delete, data: { confirm: "You sure?" }, :style=>'float:left;' %>
           <% end %>
           <%= image_tag news.user.avatar.url(:thumb) %>

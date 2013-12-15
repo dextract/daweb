@@ -1,21 +1,18 @@
 <main class="content">
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Photo:</strong>
-  <%= @news.photo %>
-</p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @news.title %>
-</p>
-
-<p>
-  <strong>Timestamp:</strong>
-  <%= @news.timestamp %>
-</p>
-
-<%= link_to 'Edit', edit_news_path(@news) %> |
-<%= link_to 'Back', news_index_path %>
+  <div class="post-container">
+    <h3 class="post-title"><%= @news.title %>
+    </h3>
+    <div class="post-thumb"><%= image_tag @news.image(:medium) %></div>
+    <div class="post-content"><p><%= @news.content %></p></div>
+    <div class="post-footer">
+      <span style="float:left">&nbsp;</span>
+      <% if signed_in? && current_user.admin? %>
+          <%= link_to "Modificar", edit_news_path(@news), :style=>'float:left;' %>
+          <span style="float:left">&nbsp;</span>
+          <%= link_to "Apagar a notícia", @news, method: :delete, data: { confirm: "You sure?" }, :style=>'float:left;' %>
+      <% end %>
+      <%= image_tag @news.user.avatar.url(:thumb) %>
+      <%= link_to User.find(@news.user_id).name, user_path(@news.user_id), :class => "name" %> on <%= @news.created_at %>
+    </div>
+  </div>
 </main>

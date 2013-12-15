@@ -1,0 +1,15 @@
+<main class="content">
+
+  <%= form_tag("/contact", method: "get") do %>
+      <%= label_tag(:user, "Utilizador:") %>
+      <%= collection_select(:user, :id, User.where("id <> ?", current_user), :id, :name, prompt: true) %>
+      <%= submit_tag "Enviar" %>
+  <% end %>
+
+  <br>
+  <% flash.each do |key, value| %>
+      <div class="alert alert-<%= key %>"><%= value %></div>
+  <% end %>
+
+
+</main>

@@ -9,11 +9,18 @@ Letsgetpro::Application.routes.draw do
   match '/signin',  to: 'sessions#new',         via: 'get'
   match '/signout', to: 'sessions#destroy',     via: 'delete'
   match '/search',  to: 'home#search',          via: 'get'
+  match '/remove_membership',  to: 'memberships#destroy',  via: 'get'
+  match '/remove_pres',  to: 'memberships#remove_pres',  via: 'get'
+  match '/remove_contact', to: 'contacts#destroy', via: 'get'
+  match '/accept_contact', to: 'contacts#accept_contact', via: 'get'
+  match '/reject_contact', to: 'contacts#reject_contact', via: 'get'
+  match '/contact', to: 'home#contact', via: 'get'
 
   get "home/register"
   get "home/report"
   get "home/login"
   get "home/contacts"
+  get "home/contact"
   get "home/search"
   get "home/company_list"
   get "home/company_cp"

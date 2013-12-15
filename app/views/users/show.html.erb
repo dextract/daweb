@@ -1,4 +1,4 @@
-
+<% if signed_in? %>
       <main class="content">
         <% flash.each do |key, value| %>
             <div class="alert alert-<%= key %>"><%= value %></div>
@@ -8,7 +8,7 @@
           <div class="post-content">
             <table>
               <tr>
-                <th>Imagem:</th><td><%=image_tag @user.avatar.url%></td>
+                <td><%=image_tag @user.avatar.url%></td><td></td>
               </tr>
               <tr>
                 <th>Nome:</th><td><%= @user.name %></td>
@@ -25,13 +25,7 @@
               <tr>
                 <th>Descrição:</th><td><%= @user.description %>y</td>
               </tr>
-              <tr>
-                <th>Cargos correntes:</th><td>Programador na <a class="user_cp_link" href="#">Empresa 1</a></td>
-              </tr>
-              <tr>
-                <th>Cargos passados:</th><td>Web Master na <a class="user_cp_link" href="#">Empresa 2</a></td><td>Network Admin na <a href="#" class="user_cp_link">Empresa 2</a></td>
-              </tr>
-              <% if current_user?(@user) %>
+              <% if current_user?(@user) || current_user.admin? %>
               <tr>
                 <th><%= link_to 'Modificar o perfil', edit_user_path(@user) %></th><td></td>
               </tr>
@@ -39,6 +33,55 @@
             </table>
           </div>
         </div>
+
+
+        <div class="post-container">
+          <h3 class="post-title">É presidente das empresas</h3>
+          <div class="post-content">
+            <table>
+              <tbody>
+
+              <% @user.companies.each do |company| %>
+                <% if owners(company).include?(@user) %>
+                  <tr>
+                    <td><%= link_to content_tag(:span, company.name), company_path(company)%></td>
+                        <td><%= link_to 'Remover presidência', :action => 'remove_pres', :controller => 'memberships',
+                                        :user_id => @user.id, :company => company %></td>
+                  </tr>
+                  <% end %>
+
+
+              <% end %>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+
+        <div class="post-container">
+          <h3 class="post-title">É colaborador nas empresas</h3>
+          <div class="post-content">
+            <table>
+              <tbody>
+              <% @user.companies.each do |company| %>
+                  <% if members(company).include?(@user) %>
+                  <tr>
+                    <td><%= link_to content_tag(:span, company.name), company_path(company)%></td>
+                    <% if owners(company).include?(@user) %>
+                    <td> <td><%= link_to 'Remover colaborador', :action => 'destroy', :controller => 'memberships',
+                                         :user_id => @user.id, :company => company %></td></td>
+                    <% end %>
+                  </tr>
+                <% end %>
+              <% end %>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+
+
+
         <div class="post-container">
           <h3 class="post-title">Pedidos de contacto pendentes</h3>
           <div class="post-content">
@@ -59,3 +102,4 @@
           </div>
         </div>
       </main><!-- .content -->
+<% end %>

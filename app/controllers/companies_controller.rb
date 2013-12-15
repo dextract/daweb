@@ -1,10 +1,11 @@
 class CompaniesController < ApplicationController
+  before_action :signed_in_user, only: [:edit, :update, :index, :show]
   before_action :set_company, only: [:show, :edit, :update, :destroy]
 
   # GET /companies
   # GET /companies.json
   def index
-    @companies = Company.all
+    @companies = Company.paginate(page: params[:page])
   end
 
   # GET /companies/1
@@ -15,6 +16,7 @@ class CompaniesController < ApplicationController
   # GET /companies/new
   def new
     @company = Company.new
+
   end
 
   # GET /companies/1/edit
@@ -28,6 +30,7 @@ class CompaniesController < ApplicationController
 
     respond_to do |format|
       if @company.save
+        current_user.member!(@company, true, false)
         format.html { redirect_to @company, notice: 'Company was successfully created.' }
         format.json { render action: 'show', status: :created, location: @company }
       else
@@ -35,6 +38,8 @@ class CompaniesController < ApplicationController
         format.json { render json: @company.errors, status: :unprocessable_entity }
       end
     end
+
+
   end
 
   # PATCH/PUT /companies/1
@@ -69,6 +74,12 @@ class CompaniesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def company_params
-      params.require(:company).permit(:name, :logo, :homepage, :description)
+      params.require(:company).permit(:name, :logo, :homepage, :description, :user_id, :owner_id)
     end
+
+
+  def signed_in_user
+    redirect_to signin_url, notice: "Please sign in." unless signed_in?
+  end
+
 end

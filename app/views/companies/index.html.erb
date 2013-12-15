@@ -1,33 +1,47 @@
-<h1>Listing companies</h1>
+<main class="content">
+  <% flash.each do |key, value| %>
+      <div class="alert alert-<%= key %>"><%= value %></div>
+  <% end %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Logo</th>
-      <th>Homepage</th>
-      <th>Description</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+  <div class="post-container">
+    <h3 class="post-title">Lista de empresas</h3>
+    <div class="post-content">
+      <table>
+        <thead>
+        <!--<tr>-->
+        <th>Logo</th>
+        <th>Nome</th>
+        <th>Homepage</th>
+        <th>Descrição</th>
+        <th></th>
+        <th></th>
+        <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <% @companies.each do |company| %>
+            <tr>
+              <td><%= image_tag company.logo(:thumb) %></td>
+              <td><%= company.name %></td>
+              <td><%= company.homepage %></td>
+              <td><%= company.description %></td>
+              <td><%= link_to 'More info', company %></td>
 
-  <tbody>
-    <% @companies.each do |company| %>
-      <tr>
-        <td><%= company.name %></td>
-        <td><%= company.logo %></td>
-        <td><%= company.homepage %></td>
-        <td><%= company.description %></td>
-        <td><%= link_to 'Show', company %></td>
-        <td><%= link_to 'Edit', edit_company_path(company) %></td>
-        <td><%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+              <% if signed_in? && current_user.admin? %>
+               <td><%= link_to 'Edit', edit_company_path(company) %></td>
+               <td><%= link_to "delete", company, method: :delete, data: { confirm: "You sure?" } %></td>
+                  <% end %>
 
-<br>
+            </tr>
+        <% end %>
+        </tbody>
+      </table>
+      <div class="pagination">
+        <%= will_paginate %>
+      </div>
+    </div>
 
-<%= link_to 'New Company', new_company_path %>
+
+  </div>
+
+</main><!-- .content -->

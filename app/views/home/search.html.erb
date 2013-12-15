@@ -7,10 +7,12 @@
         <% end %>
 
         <br>
-        <% if @users_found.count>0 %>
+        <% if @users_found.count>0 || @companies_found.count>0 %>
 
         <div id="search_results_header">
           <%= @users_found.count %> users matching the query have been found!<br>
+          <br>
+          <%= @companies_found.count %> companies matching the query have been found!<br>
         </div>
 
         <div id="search_results">
@@ -43,12 +45,38 @@
             </div>
 
             <div class="box">
-              <p><a href="#">Empresa 1</a></p>
-              <p><a href="#">Empresa 2</a></p>
-              <p><a href="#">Empresa 3</a></p>
+              <table>
+                <% @companies_found.each do |t| %>
+                    <tr>
+                      <td><%= link_to t.name, company_path(t) %></td>
+                      <% if signed_in? %>
+                          <% if current_user.admin? %>
+                              <td><%= link_to 'Edit', edit_company_path(t) %></td>
+                              <% if !current_user?(t) %>
+                                  <td><%= link_to 'Delete', t, method: :delete, data: { confirm: "You sure?" } %></td>
+                              <% end %>
+                          <% end %>
+                      <% end %>
+                    </tr>
+                <% end %>
+              </table>
+              <div class="pagination">
+
+                <%= will_paginate @companies_found %>
+
+              </div>
             </div>
         </div>
+
+
         <% end %>
+
+        <%  if !params[:query].nil? && @users_found.count==0 %>
+            <div id="search_results_header">
+              Nothing found!<br>
+            </div>
+        <% end %>
+        <br>
 
       </main><!-- .content -->
 

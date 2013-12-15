@@ -1,24 +1,125 @@
-<p id="notice"><%= notice %></p>
+<main class="content">
+  <% flash.each do |key, value| %>
+      <div class="alert alert-<%= key %>"><%= value %></div>
+  <% end %>
+  <div class="post-container">
+    <h3 class="post-title">Informação sobre "<%= @company.name %>"</h3>
+    <div class="post-content">
+      <table>
+        <tr>
+          <td><%=image_tag @company.logo.url%></td><td></td>
+        </tr>
+        <tr>
+          <th>Nome:</th><td><%= @company.name %></td>
+        </tr>
+        <tr>
+          <th>Email:</th><td><%= @company.homepage %></td>
+        </tr>
+        <tr>
+          <th>Descrição:</th><td><%= @company.description %>y</td>
+        </tr>
 
-<p>
-  <strong>Name:</strong>
-  <%= @company.name %>
-</p>
+        <% if signed_in? && (current_user.admin? || owners(@company).include?(current_user) )  %>
+            <tr>
+              <td><%= link_to 'Modificar a empresa', edit_company_path(@company) %></td>
+              <td><%= link_to 'Apagar a empresa', @company, method: :delete, data: { confirm: "You sure?" } %></td>
+            </tr>
+        <% end %>
 
-<p>
-  <strong>Logo:</strong>
-  <%= @company.logo %>
-</p>
+      </table>
+    </div>
+  </div>
+  <div class="post-container">
+    <h3 class="post-title">Colaboradores presentes</h3>
+    <div class="post-content">
+      <% if members(@company).length>0 %>
+          <table>
+            <thead>
+            <!--<tr>-->
+            <th>Imagem</th>
+            <th>Nome</th>
+            <th>Idade</th>
+            <th>País</th>
+            <th>Descrição</th>
+            <th></th>
+            <th></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
 
-<p>
-  <strong>Homepage:</strong>
-  <%= @company.homepage %>
-</p>
+            <% members(@company).each do |user| %>
+                <tr>
+                  <td><%= image_tag user.avatar(:thumb) %></td>
+                  <td><%= user.name %></td>
+                  <td><%= user.age %></td>
+                  <td><%= user.country %></td>
+                  <td><%= user.description %></td>
+                  <% if owners(@company).include?(user) %>
+                    <td>Presidente</td>
+                  <% end %>
+                  <td><%= link_to 'More info', user %></td>
+                  <% if signed_in? && (current_user.admin? || ( owners(@company).include?(current_user) && !owners(@company).include?(user) ))  %>
+                      <td>
+                        <%= link_to 'Remover colaborador', :action => 'destroy', :controller => 'memberships',
+                                    :user_id => user.id, :company => @company %>
+                      </td>
+                  <% end %>
+                </tr>
+            <% end %>
+            </tbody>
+          </table>
+          <div class="pagination">
+          </div>
+       <% else %>
+      Não existem colaboraderes presentes nesta empresa
+      <% end %>
 
-<p>
-  <strong>Description:</strong>
-  <%= @company.description %>
-</p>
+    </div>
+  </div>
+  <div class="post-container">
+    <h3 class="post-title">Colaboradores passados</h3>
+    <div class="post-content">
+      <% if ex(@company).length>0 %>
+      <table>
+        <thead>
+        <!--<tr>-->
+        <th>Imagem</th>
+        <th>Nome</th>
+        <th>Idade</th>
+        <th>País</th>
+        <th>Descrição</th>
+        <th></th>
+        <th></th>
+        <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <% ex(@company).each do |user| %>
+            <tr>
+              <td><%= image_tag user.avatar(:thumb) %></td>
+              <td><%= user.name %></td>
+              <td><%= user.age %></td>
+              <td><%= user.country %></td>
+              <td><%= user.description %></td>
+              <td><%= link_to 'More info', user %></td>
+              <% if signed_in? && (current_user.admin? || ( owners(@company).include?(current_user) && !owners(@company).include?(user) ))  %>
+                      <td>
+                        <%= link_to 'Remover colaborador', :action => 'destroy', :controller => 'memberships',
+                                    :user_id => user.id, :company => @company %>
+                      </td>
+                  <% end %>
+            </tr>
+        <% end %>
+        </tbody>
+      </table>
+      <% else %>
+          Não existem colaboraderes passados nesta empresa
+      <% end %>
+      <div class="pagination">
+      </div>
 
-<%= link_to 'Edit', edit_company_path(@company) %> |
-<%= link_to 'Back', companies_path %>
+
+    </div>
+  </div>
+</main><!-- .content -->

@@ -17,8 +17,9 @@ namespace :db do
                  picture: "none",
                  password: "default",
                  password_confirmation: "default")
-    99.times do |n|
+    30.times do |n|
       name  = Faker::Name.name
+      nameC = Faker::Name.first_name
       age = 20
       country = "PT"
       description = "desc"
@@ -38,6 +39,30 @@ namespace :db do
                     photo: "none",
                     user_id: 1
       )
+      Company.create!(name: nameC,
+                      homepage: "ssss",
+                      description: "desc"
+      )
     end
+      users = User.all
+      companies = Company.all
+      company = companies.first
+
+      members_users      = users[3..20]
+
+      members_users.each      { |user_m| user_m.member!(company, false, false) }
+      User.first.member!(company, true, false)
+      User.last.member!(company, false, true)
+
+
+    users = User.all
+    user  = users.first
+    contactee_users = users[2..20]
+    contacts      = users[3..20]
+    contactee_users.each { |contactee| user.contact!(contactee, true) }
+    contacts.each      { |contact| contact.contact!(user, true) }
+
+
+
   end
 end
